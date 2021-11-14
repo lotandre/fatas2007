@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-14 12:18+0200\n"
+"PO-Revision-Date: 2021-11-14 11:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: .\result\pages.py:59
+msgid "in 1 month"
+msgstr "in einem Monat"
+
+#: .\result\pages.py:63
+msgid "in 2 months"
+msgstr "in zwei Monaten"
+
+#: .\result\pages.py:67
+msgid "in 3 months"
+msgstr "in drei Monaten"
+
+#: .\result\templates\result\Result.html:11
+#: .\result\templates\result\Result_nodelay.html:11
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: .\result\templates\result\Result.html:14
+#: .\result\templates\result\Result_nodelay.html:14
+msgid "You have finished all activities."
+msgstr "Sie haben alle Aufgaben abgeschlossen."
+
+#: .\result\templates\result\Result.html:16
+#: .\result\templates\result\Result_nodelay.html:16
+#, python-format
+msgid ""
+"For additional compensation, Life %(reward_life)s was chosen.\n"
+"        Your reward on that period was %(reward_euro)s Euro."
+msgstr ""
+"Für Ihre zusätzliche Vergütung wurde Leben %(reward_life)s gewählt. Ihre "
+"Belohnung in dieser Periode war %(reward_euro)s Euro."
+
+#: .\result\templates\result\Result.html:20
+#: .\result\templates\result\Result_nodelay.html:20
+#, python-format
+msgid ""
+"You chose to invest %(risk_choice)s%% (or %(invest)s Euro) in the risky "
+"investment.\n"
+"        The result of the risky investment is \"%(risk_outcome)s\".\n"
+"        You get %(earn_invest)s Euro from the investment.\n"
+"        Your total reward is %(total)s Euro."
+msgstr ""
+"Sie haben entschieden, %(risk_choice)s%% von Ihrer Belohnung (oder %(invest)"
+"s Euro) in die risikoreiche Anlage zu investieren. Das Ergebnis der "
+"risikoreichen Anlage ist «%(risk_outcome)s». Sie bekommen %(earn_invest)s "
+"Euro mit dieser Investition. Ihre Belohnung beträgt neu %(total)s Euro."
+
+#: .\result\templates\result\Result.html:27
+#, python-format
+msgid ""
+"You chose to receive the additional compensation %(pay_time)s.\n"
+"        Therefore, you get an additional bonus of %(bonus_time)s Euros.\n"
+"        Your total final additional reward is %(total1)s Euros.\n"
+"        You will receive this reward %(pay_time)s. No further action is "
+"needed."
+msgstr ""
+"Sie haben entschieden Ihre Belohnung %(pay_time)s zu erhalten und dafür "
+"einen Bonus von %(bonus_time)s Euros zu bekommen. Ihre Belohnung wird "
+"insgesamt %(total1)s Euro betragen. Dieser Betrag wird Ihnen %(pay_time)s "
+"gutgeschrieben. Sie müssen dafür nichts mehr tun."
+
+#: .\result\templates\result\Result.html:33
+#: .\result\templates\result\Result_nodelay.html:26
+msgid "Click on Finish to collect your additional compensation."
+msgstr "Klicken Sie auf \"Ende\", um Ihre Vergütung zu bekommen."
+
+#: .\result\templates\result\Result.html:39
+#: .\result\templates\result\Result_nodelay.html:32
+#: .\result\templates\result\Timeout.html:22
+msgid "Finish"
+msgstr "Ende"
+
+#: .\result\templates\result\Timeout.html:11
+msgid "Long breaks"
+msgstr "Zu viele bzw. zu lange Pausen"
+
+#: .\result\templates\result\Timeout.html:15
+msgid ""
+"Unfortunately, you are taking very long breaks.\n"
+"            The simulation needs to be completed in a reasonable amount of "
+"time, as informed in the introduction page.\n"
+"            Thus, we regret to inform that you are unable to continue "
+"participating in the simulation."
+msgstr ""
+"Wir danken Ihnen für Ihre Teilnahme. Sie müssen in dieser Simulation "
+"Entscheidungen ohne große zeitliche Unterbrüche treffen, wie das zu Beginn "
+"angekündigt wurde. Da das gemäß unserer Messung nicht zutrifft, müssen wir "
+"Sie leider aus der Simulation ausschließen."

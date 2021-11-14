@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-14 12:18+0200\n"
+"PO-Revision-Date: 2021-11-11 21:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: .\post_survey\models.py:44
+msgid "In which year are you born?"
+msgstr "In welchem Jahr sind Sie geboren?"
+
+#: .\post_survey\models.py:48
+msgid "male"
+msgstr "Männlich"
+
+#: .\post_survey\models.py:48
+msgid "female"
+msgstr "Weiblich"
+
+#: .\post_survey\models.py:48
+msgid "something else"
+msgstr "Anderes"
+
+#: .\post_survey\models.py:49 .\post_survey\models.py:63
+msgid "no answer"
+msgstr "Keine Angabe"
+
+#: .\post_survey\models.py:51
+msgid "What is your gender?"
+msgstr "Was ist Ihr Geschlecht?"
+
+#: .\post_survey\models.py:55
+msgid ""
+"Did you complete a study? If you have completed several studies, which one "
+"is the highest?"
+msgstr ""
+"Haben Sie eine abgeschlossene Berufsausbildung oder ein Studium? Falls es "
+"mehrere Abschlüsse sind, nennen Sie bitte nur den höchsten."
+
+#: .\post_survey\models.py:57
+msgid ""
+"Apprenticeship (Dual system) qualification (Full-time Vocational Schools, On "
+"the Job Training)"
+msgstr ""
+"Beruflich-schulische Ausbildung (Lehre, Berufsfachschule, Höhere "
+"Handelsschule)"
+
+#: .\post_survey\models.py:59
+msgid "Bachelor, Qualification from trade and technical schools"
+msgstr "Bachelor, Fachhochschulabschluss, Ingenieursschule, Meisterschule"
+
+#: .\post_survey\models.py:60
+msgid "Master, Diploma (Teachers' Examination, Magister)"
+msgstr "Master, Diplomabschluss (Lehrerausbildung, Magister)"
+
+#: .\post_survey\models.py:61
+msgid "PhD, Doctor's degree"
+msgstr "Promotion, Habilitation"
+
+#: .\post_survey\models.py:62
+msgid "No vocational qualification attained"
+msgstr "Noch keinen Abschluss erreicht"
+
+#: .\post_survey\models.py:67
+msgid ""
+"Did you take part in lectures, courses, or further training about finance or "
+"the handling of money during your school or vocational training?"
+msgstr ""
+"Haben Sie während Ihrer Schul- oder Berufsausbildung an Vorlesungen, Kursen "
+"oder Fortbildungen zum Thema Finanzen oder dem Umgang mit Geld teilgenommen?"
+
+#: .\post_survey\models.py:70
+msgid "Yes, participated"
+msgstr "Ja, teilgenommen"
+
+#: .\post_survey\models.py:71
+msgid "No, did not participate"
+msgstr "Nein, nicht teilgenommen"
+
+#: .\post_survey\models.py:72 .\post_survey\models.py:85
+msgid "No answer"
+msgstr "Keine Angabe"
+
+#: .\post_survey\models.py:75
+msgid ""
+"What do you estimate is your household's MONTHLY net disposable income, that "
+"is, the money that is available to the entire household after deducting "
+"taxes and social security contributions to cover expenses?"
+msgstr ""
+"Wie hoch schätzen Sie, ist das MONATLICH verfügbare Nettoeinkommen Ihres "
+"Haushalts, also dasjenige Geld, das dem gesamten Haushalt nach Abzug von "
+"Steuern und Sozialversicherungsbeiträgen zur Deckung der Ausgaben zur "
+"Verfügung steht?"
+
+#: .\post_survey\models.py:80
+msgid "Less than EUR 400"
+msgstr "Bis unter EUR 400"
+
+#: .\post_survey\models.py:80
+msgid "EUR 400 until EUR 800"
+msgstr "EUR 400 bis unter EUR 800"
+
+#: .\post_survey\models.py:81
+msgid "EUR 800 until EUR 1200"
+msgstr "EUR 800 bis unter EUR 1200"
+
+#: .\post_survey\models.py:81
+msgid "EUR 1200 until EUR 1600"
+msgstr "EUR 1200 bis unter EUR 1600"
+
+#: .\post_survey\models.py:82
+msgid "EUR 1600 until EUR 2000"
+msgstr "EUR 1600 bis unter EUR 2000"
+
+#: .\post_survey\models.py:82
+msgid "EUR 2000 until EUR 2400"
+msgstr "EUR 2000 bis unter EUR 2400"
+
+#: .\post_survey\models.py:83
+msgid "EUR 2400 until EUR 2800"
+msgstr "EUR 2400 bis unter EUR 2800"
+
+#: .\post_survey\models.py:83
+msgid "EUR 2800 until EUR 3200"
+msgstr "EUR 2800 bis unter EUR 3200"
+
+#: .\post_survey\models.py:84
+msgid "EUR 3200 until EUR 3600"
+msgstr "EUR 3200 bis unter EUR 3600"
+
+#: .\post_survey\models.py:84
+msgid "EUR 3600 until EUR 4000"
+msgstr "EUR 3600 bis unter EUR 4000"
+
+#: .\post_survey\models.py:85
+msgid "More than EUR 4000"
+msgstr "über EUR 4000"
+
+#: .\post_survey\pages.py:27
+msgid "Please answer all questions."
+msgstr "Bitte beantworten Sie alle Fragen."
+
+#: .\post_survey\pages.py:31
+msgid "Please input a sensible year of birth."
+msgstr "Bitte geben Sie ein sinnvolles Geburtsjahr ein."
+
+#: .\post_survey\pages.py:45
+msgid ""
+"Please decide the amount of reward you would like to put in the risky "
+"investment."
+msgstr ""
+"Bitte entscheiden Sie, wie hoch der Gewinn für die riskante Investition sein "
+"soll."
+
+#: .\post_survey\pages.py:67
+msgid "Please choose one of the options."
+msgstr "Bitte wählen Sie eine der Optionen."
+
+#: .\post_survey\templates\post_survey\Info.html:11
+msgid "Demographic Questionnaire"
+msgstr "Demographische Fragen"
+
+#: .\post_survey\templates\post_survey\Info.html:20
+msgid ""
+"Before we proceed, we would like you to answer a few background questions.\n"
+"        With these questions we would like to evaluate how well the "
+"participants in this study\n"
+"        represent the whole population.\n"
+"        Your answers have no effect on your reward."
+msgstr ""
+"Bevor wir fortfahren, möchten wir Sie bitten ein Paar Fragen zu Ihrem "
+"Hintergrund zu beantworten. Damit möchten wir ermitteln inwiefern die "
+"Teilnehmer dieser Studie die Gesamtbevölkerung repräsentieren. Ihre "
+"Antworten haben keinen Einfluss auf Ihre Belohnung."
+
+#: .\post_survey\templates\post_survey\Risk_pref.html:20
+#: .\post_survey\templates\post_survey\Time_pref.html:15
+msgid "Task"
+msgstr "Aufgabe"
+
+#: .\post_survey\templates\post_survey\Risk_pref.html:22
+msgid ""
+"Now, you can invest part of (or all) your rewards in a risky asset.\n"
+"        <br>\n"
+"        With the risky asset, in 1/3 of the cases you will gain 2.5 times "
+"the amount you invest,\n"
+"        in 2/3 of the cases you will lose the amount you invest."
+msgstr ""
+"Jetzt haben Sie die Möglichkeit, einen Teil Ihrer Belohnung in eine "
+"risikoreiche Anlage zu investieren.\n"
+"        <br>\n"
+"        Mit dieser risikoreichen Anlage werden Sie in 1/3 der Fälle das 2,5-"
+"fache des investierten Betrags dazu gewinnen und in 2/3 der Fälle werden Sie "
+"den investierten Betrag verlieren."
+
+#: .\post_survey\templates\post_survey\Risk_pref.html:87
+msgid ""
+"The amount you do not invest is not affected by the outcome of the risky "
+"asset.\n"
+"        <br>\n"
+"        Use the slider to see your potential gain and loss with the risky "
+"asset\n"
+"        and decide what percentage of your rewards to invest in it."
+msgstr ""
+"Der Betrag, den Sie nicht investieren, bleibt derselbe unabhängig davon, ob "
+"Sie mit der risikoreichen Anlage gewinnen oder verlieren.\n"
+"<br>\n"
+"        Verwenden Sie den Schieberegler, um zu sehen wie sich der "
+"potenzielle Gewinn und der potenzielle Verlust ändern würden und um eine "
+"Entscheidung zu treffen."
+
+#: .\post_survey\templates\post_survey\Risk_pref.html:97
+#, python-format
+msgid ""
+"You invest <span id=\"demo_risky\"></span>%% of your reward in the risky "
+"investment.\n"
+"        <br>\n"
+"        <b>In 1/3 of the cases, you will gain <span id=\"demo_win\"></span>%"
+"% over your original reward.\n"
+"            <br>\n"
+"            In 2/3 of the cases, you will lose <span id=\"demo_lose\"></span>"
+"%% of your original reward.\n"
+"        </b>"
+msgstr ""
+"Sie investieren <span id=\"demo_risky\"></span>%% Ihrer Belohnung in der "
+"risikoreichen Anlage.\n"
+"        <br>\n"
+"        <b>In 1/3 der Fälle werden Sie <span id=\"demo_win\"></span>%% von "
+"Ihrer ursprünglichen Belohnung dazu gewinnen.\n"
+"            <br>\n"
+"        In 2/3 der Fälle werden Sie <span id=\"demo_lose\"></span>%% von "
+"Ihrer ursprünglichen Belohnung verlieren.</b>"
+
+#: .\post_survey\templates\post_survey\Time_pref.html:17
+msgid ""
+"In the following we offer you a bonus, in additional to your rewards with "
+"this game."
+msgstr ""
+"Im Folgenden bieten wir Ihnen einen Bonus an, zusätzlich zu Ihrer Belohnung "
+"mit diesem Spiel."
+
+#: .\post_survey\templates\post_survey\Time_pref.html:19
+msgid "Which option do you prefer?"
+msgstr "Welche Alternative ziehen Sie vor?"
+
+#: .\post_survey\templates\post_survey\Time_pref.html:21
+msgid "My rewards now, no bonus."
+msgstr "Meine Belohnung jetzt, ohne Bonus."
+
+#: .\post_survey\templates\post_survey\Time_pref.html:23
+#, python-format
+msgid "My rewards plus 5.0%% bonus, in one month."
+msgstr "Meine Belohnung plus einen Bonus von 5.0%% in einem Monat."
+
+#: .\post_survey\templates\post_survey\Time_pref.html:25
+#, python-format
+msgid "My rewards plus 10.3%% bonus, in two months."
+msgstr "Meine Belohnung plus einen Bonus von 10.3%% in zwei Monaten."
+
+#: .\post_survey\templates\post_survey\Time_pref.html:27
+#, python-format
+msgid "My rewards plus 15.8%% bonus, in three months."
+msgstr "Meine Belohnung plus einen Bonus von 15.8%% in drei Monaten."

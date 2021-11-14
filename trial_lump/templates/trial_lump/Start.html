@@ -1,0 +1,37 @@
+{% extends "trial_lump/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+    {% blocktrans %}Trial round{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}You will now play a trial life to get you familiarized with the experiment.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Everything is identical to the lives you will play,
+        except that you will not earn any financial reward based on the results of this trial life.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Use this round to explore all features of the game.
+        You can access the instructions clicking on the buttons at the bottom of the page.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:9%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title{
+            display: none;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,646 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-14 12:18+0200\n"
+"PO-Revision-Date: 2021-11-14 11:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: .\instructions\pages.py:27
+msgid "Please answer the question."
+msgstr "Bitte beantworten Sie die Frage."
+
+#: .\instructions\templates\instructions\End_instruct.html:10
+msgid "Ineligible to participate"
+msgstr "Teilnahmeausschluss"
+
+#: .\instructions\templates\instructions\End_instruct.html:13
+msgid ""
+"You advanced through the Instruction screens faster than a skilled reader "
+"would take to read them carefully.\n"
+"        Participants must pay attention and understand the Instructions in "
+"order to participate."
+msgstr ""
+"Wir danken Ihnen für Ihre Teilnahme. Leider brauchten Sie für die Aufgaben "
+"weniger Zeit als ein geübter Leser brauchen würde, um die Aufgaben "
+"sorgfältig zu lesen."
+
+#: .\instructions\templates\instructions\End_instruct.html:16
+msgid "Therefore, we regret to inform that you are unable to continue."
+msgstr ""
+"Wir bedauern, dass wir Sie deshalb leider ausschließen müssen und Sie nicht "
+"weiterspielen können."
+
+#: .\instructions\templates\instructions\End_instruct.html:18
+msgid "Finish"
+msgstr "Fertig"
+
+#: .\instructions\templates\instructions\Instruct0.html:10
+msgid "The Financial Decision-Making Experiment"
+msgstr "Experiment zu finanziellen Entscheidungen"
+
+#: .\instructions\templates\instructions\Instruct0.html:13
+msgid "This experiment has three rounds."
+msgstr "Dieses Experiment hat drei Runden."
+
+#: .\instructions\templates\instructions\Instruct0.html:15
+msgid ""
+"Each round lasts a variable number of periods (from 1 to 15).\n"
+"        The exact length of each round depends on a random draw."
+msgstr ""
+"Jede Runde dauert bis zu 15 Perioden. Die Anzahl Perioden in einer Runde "
+"wird zufällig bestimmt."
+
+#: .\instructions\templates\instructions\Instruct1.html:10
+msgid "Card Deck Draw"
+msgstr "Kartenstapel"
+
+#: .\instructions\templates\instructions\Instruct1.html:13
+msgid ""
+"At the beginning of each round,\n"
+"        you will get a <b>Card Deck</b> with 14 <b><span style=\"color: green"
+"\">green</span></b> cards\n"
+"        and 1 <b><span style=\"color: red\">red</span></b> card."
+msgstr ""
+"Am Anfang einer Runde werden Sie einen <b>Kartenstapel</b> mit 14 <b><span "
+"style=\"color: green\">grünen</span></b> und 1 <b><span style=\"color: "
+"darkred\">roten</span></b> Karten bekommen."
+
+#: .\instructions\templates\instructions\Instruct1.html:17
+msgid ""
+"At the end of each period, one card is randomly drawn out of the <b>Card "
+"Deck</b>."
+msgstr ""
+"Am Ende jeder Periode wird zufällig eine Karte von diesem <b>Kartenstapel</"
+"b> gezogen."
+
+#: .\instructions\templates\instructions\Instruct1.html:19
+msgid ""
+"If the card drawn is <b><span style=\"color: green\">green</span></b>, you "
+"will proceed to the next period, and the card will be removed.\n"
+"        If the card draw is <b><span style=\"color: red\">red</span></b>, "
+"the round will end."
+msgstr ""
+"Falls die gezogene Karte <b><span style=\"color: green\">grünen</span></b> "
+"ist, wird die nächste Periode anfangen. Falls die Karte <b><span style="
+"\"color: darkred\">rot</span></b> ist, wird die Runde zu Ende gehen. Die "
+"gezogene Karte wird vom Kartenstapel entfernt."
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:10
+#: .\instructions\templates\instructions\Instruct2_combined.html:10
+#: .\instructions\templates\instructions\Instruct2_lump.html:10
+msgid "Start of Payoff Decision"
+msgstr "Auszahlungsbeginn"
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:13
+msgid ""
+"At the beginning of each round,\n"
+"        you must decide in which period you want to <b>Start</b> earning "
+"<b>Payoffs</b> (in points)."
+msgstr ""
+"Am Anfang jeder Runde werden Sie entscheiden müssen in welcher Periode Sie "
+"<b>beginnen</b> möchten, eine Auszahlung zu bekommen."
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:16
+msgid ""
+"The later your <b>Start</b> period, the more you will earn per period as "
+"shown in the table below."
+msgstr ""
+"Je später die Auszahlung erfolgt, desto höher ist der Betrag, den Sie "
+"erhalten werden wie die Tabelle unten zeigt."
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:27
+#: .\instructions\templates\instructions\Instruct2_combined.html:29
+#: .\instructions\templates\instructions\Instruct2_lump.html:27
+msgid "If I start earning Payoffs in period..."
+msgstr "Periode, in der die Auszahlung beginnt"
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:28
+#: .\instructions\templates\instructions\Instruct2_combined.html:30
+msgid "…then my Payoff (in points) in each of the following periods will be:"
+msgstr "Auszahlung (in Punkten) für alle darauffolgenden Perioden"
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:49
+msgid ""
+"You will continue earning the same number of points as in the Start period "
+"until you draw a red card. In this case, the round ends.\n"
+"        If you draw the red card before your <b>Start</b> period, you will "
+"earn zero."
+msgstr ""
+"Sie werden dieselbe Anzahl Punkte als Auszahlung in allen darauffolgenden "
+"Perioden erhalten bis Sie eine rote Karte ziehen. In diesem Fall wird die "
+"Runde zu Ende gehen. Wenn Sie die rote Karte vor der Periode ziehen, in der "
+"die Auszahlungen beginnen sollten, werden Sie keine Auszahlung bekommen."
+
+#: .\instructions\templates\instructions\Instruct2_annuity.html:52
+msgid ""
+"<b>Example</b>: Suppose that at the beginning of a round you chose to\n"
+"        <b>Start</b> receiving a Payoff on Period 8.\n"
+"        Suppose also that you draw green cards until Period 9 and at the end "
+"of Period 10 you draw a red card.\n"
+"        In this case, you would earn zero in Period 1 to 7 (because you "
+"chose to Start receiving Payoffs in Period 8).\n"
+"        In period 8, you earn 42 points (see table above). In period 9 and "
+"10, while you are still active,\n"
+"        you continue earning 42 points.\n"
+"        In Period 11 you earn zero, since at the end of Period 10 you draw "
+"the red card and the round ended."
+msgstr ""
+"<b>Beispiel</b>: Angenommen Sie würden am Anfang der Runde entscheiden, "
+"Auszahlungen ab Periode 8 zu bekommen. Nehmen Sie an, dass Sie bis Periode 9 "
+"eine grüne Karte und in Periode 10 eine rote Karte ziehen. In diesem Fall "
+"werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie entscheiden "
+"haben eine Auszahlung ab Periode 8 zu bekommen). In Periode 8 werden Se 42 "
+"Punkte bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
+"je 42 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
+"keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
+"Karte gezogen haben und damit die Runde zu Ende ging."
+
+#: .\instructions\templates\instructions\Instruct2_combined.html:13
+msgid ""
+"At the beginning of each round (before Period 1),\n"
+"        you decide in which period you want to <b>Start</b> earning "
+"<b>Payoffs</b> (in points).\n"
+"        That period also determines your possible one-time <b>Payoff Bonus</"
+"b>."
+msgstr ""
+"Am Anfang von jeder Runde werden Sie entscheiden müssen in welcher Periode "
+"Sie beginnen möchten, eine Auszahlung zu bekommen. Dieser Zeitraum bestimmt "
+"auch Ihren möglichen einmaligen Auszahlungsbonus."
+
+#: .\instructions\templates\instructions\Instruct2_combined.html:17
+msgid ""
+"The later your <b>Start</b> period the larger your one-time bonus is as "
+"shown in the table below."
+msgstr ""
+"Je später die Auszahlung erfolgt, desto höher ist der Betrag, den Sie "
+"erhalten werden wie die Tabelle unten zeigt."
+
+#: .\instructions\templates\instructions\Instruct2_combined.html:31
+msgid "I will also receive a one-time Payoff bonus (in points):"
+msgstr "Einmaliger Bonus (in Punkten)"
+
+#: .\instructions\templates\instructions\Instruct2_combined.html:52
+msgid ""
+"For the Start period you will receive the Payoff and the one-time Payoff "
+"bonus for that period.\n"
+"        You will continue earning the same number of points as in the Start "
+"period (but no bonus) until you draw a red card.\n"
+"        In this case, the round ends."
+msgstr ""
+"In der Periode, in dem Sie entscheiden eine Auszahlung zu bekommen, werden "
+"Sie die Auszahlung für diese Periode und einen einmaligen Bonus bekommen. In "
+"allen darauffolgenden Perioden werden Sie dieselbe Auszahlung bekommen wie "
+"in der Periode in dem Sie anfangen, ohne den einmaligen Bonus. Sie bekommen "
+"diese Auszahlungen bis Sie eine rote Karte ziehen. In diesem Fall wird die "
+"Runde zu Ende gehen."
+
+#: .\instructions\templates\instructions\Instruct2_combined.html:56
+msgid ""
+"<b>Example</b>: Suppose that at the beginning of a round you chose to\n"
+"        <b>Start</b> receiving a Payoff on Period 8.\n"
+"        Suppose also that you draw green cards until Period 9 and at the end "
+"of Period 10 you draw a red card.\n"
+"        In this case, you would earn zero on Period 1 to 7 (because you "
+"chose to Start receiving Payoffs in Period 8).\n"
+"        In period 8, you earn 23 points as a Payoff and 85 points as a one-"
+"time Payoff bonus.\n"
+"        In Period 9, you will earn 23 points (see table above).\n"
+"        In period 10, you will earn 23 points again since you are still "
+"active.\n"
+"        In Period 11 you earn zero, since at the end of Period 10 you draw "
+"the red card and exit the round."
+msgstr ""
+"<b>Beispiel</b>: Nehmen Sie an, Sie würden am Anfang der Runde entscheiden, "
+"Auszahlungen ab Periode 8 zu bekommen. Nehmen Sie auch an, dass Sie bis "
+"Periode 9 eine grüne Karte und in Periode 10 eine rote Karte ziehen. In "
+"diesem Fall werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie "
+"entschieden haben eine Auszahlung ab Periode 8 zu bekommen). In Periode 8 "
+"werden Sie 23 Punkte Als Auszahlung und einen einmaligen Bonus von 85 "
+"Punkten bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
+"je 23 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
+"keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
+"Karte gezogen haben und damit die Runde zu Ende ging."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:13
+msgid ""
+"At the beginning of each round,\n"
+"        you will decide in which period you want to earn your <b>Payoffs</b> "
+"(in points)."
+msgstr ""
+"Zu Beginn jeder Runde entscheiden Sie, in welchem Zeitraum Sie Ihre "
+"<b>Auszahlungen</b> (in Punkten) verdienen möchten."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:16
+msgid ""
+"The later your Payoff period, the more you earn as shown in the table below."
+msgstr ""
+"Je später die Auszahlung erfolgt, desto höher ist der Betrag, den Sie "
+"erhalten werden wie die Tabelle unten zeigt."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:28
+msgid "…then my Payoff (in points) will be:"
+msgstr "Auszahlung (in Punkten)"
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:49
+msgid ""
+"If you draw the red card before your <b>Payoff</b> period, you will earn "
+"zero."
+msgstr ""
+"Wenn Sie die rote Karte vor Ihrer <b>Auszahlung </b> Periode ziehen, "
+"verdienen Sie null."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:51
+msgid ""
+"If you are still active on your <b>Payoff</b> period,\n"
+"        you will earn the corresponding points from the table for that "
+"period.\n"
+"        You will only earn your Payoff <b>once</b>."
+msgstr ""
+"Sobald Sie die Periode erreicht haben, in der Ihre <b>Auszahlung</b> "
+"beginnen sollte, werden Sie die Auszahlung für diese Periode erhalten. Sie "
+"bekommen eine Auszahlung <b>nur</b> für die gewählte Periode."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:55
+msgid ""
+"<b>Example</b>: Suppose that at the beginning of a round you chose to start "
+"receiving\n"
+"        a <b>Payoff</b> on Period 8.\n"
+"        Suppose also that until Period 9, you draw green cards and at the "
+"end of Period 10 you draw a red card.\n"
+"        In this case, you would earn zero in Period 1 to 7 (because you "
+"chose to Start receiving Payoffs in Period 8).\n"
+"        In Period 8, you earn 188 points (see table above).\n"
+"        In Period 9 and 10 you earn zero.\n"
+"        In Period 11 you earn zero as well, since at the end of Period 10 "
+"you draw the red card and the round ended."
+msgstr ""
+"<b>Beispiel</b>: Nehmen Sie an, Sie würden am Anfang der Runde entscheiden, "
+"Auszahlungen ab Periode 8 zu bekommen. Nehmen Sie auch an, dass Sie bis "
+"Periode 9 eine grüne Karte und in Periode 10 eine rote Karte ziehen. In "
+"diesem Fall werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie "
+"entschieden haben eine Auszahlung ab Periode 8 zu bekommen). In Periode 8 "
+"werden Sie 188 Punkte als Auszahlung bekommen (s. Tabelle oben). In Periode "
+"9 und 10 werden Sie keine Auszahlungen mehr bekommen. In Periode 11 werden "
+"Sie ebenfalls keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 "
+"eine rote Karte gezogen haben und damit die Runde zu Ende ging."
+
+#: .\instructions\templates\instructions\Instruct3_annuity.html:10
+#: .\instructions\templates\instructions\Instruct3_combined.html:10
+#: .\instructions\templates\instructions\Instruct3_lump.html:10
+msgid "Rewards"
+msgstr "Ihre Belohnung"
+
+#: .\instructions\templates\instructions\Instruct3_annuity.html:13
+msgid "We sum your <b>Total Payoff</b> points at the end of each round."
+msgstr ""
+"Für jede Runde werden alle Ihre Punkte, die Sie in der Runde als Auszahlung "
+"bekommen, <b>addiert</b>."
+
+#: .\instructions\templates\instructions\Instruct3_annuity.html:15
+msgid ""
+"The computer will randomly select one of the 3 rounds.\n"
+"        The <b>Total Payoff</b> points in that round will be exchanged for "
+"Euros at a rate of &euro; 1.00 = 23 points."
+msgstr ""
+"Der Computer wird zum Schluss zufällig eine der 3 Runden auswählen. Ihre "
+"Punkte, die Sie als Auszahlung in der gewählten Runde gesammelt haben, "
+"werden mit einem Wechselkurs von <b>&euro; 1.00 = 23 Punkte</b> in Euros "
+"umgerechnet. Dieser Betrag wird Ihre Vergütung sein, die Sie zusätzlich für "
+"Ihre Teilnahme bekommen werden."
+
+#: .\instructions\templates\instructions\Instruct3_combined.html:13
+msgid ""
+"We sum your <b>Total Payoff</b> points at the end of each round (including "
+"the bonus)."
+msgstr ""
+"Für jede Runde werden alle Ihre Punkte, die Sie als Auszahlung und als Bonus "
+"bekommen, <b>addiert</b>."
+
+#: .\instructions\templates\instructions\Instruct3_combined.html:15
+msgid ""
+"The computer will randomly select one of your 3 rounds.\n"
+"        The <b>Total Payoff</b> points in that round will be exchanged for "
+"Euros at a rate of &euro; 1.00 = 23 points."
+msgstr ""
+"Der Computer wird zum Schluss zufällig eine der 3 Runden auswählen. Ihre "
+"Punkte, die Sie in dieser Runde gesammelt haben, werden mit einem "
+"Wechselkurs von <b>&euro; 1.00 = 23 Punkte</b> in Euros umgerechnet. Dieser "
+"Betrag wird Ihre Vergütung sein, die Sie zusätzlich für Ihre Teilnahme "
+"bekommen werden."
+
+#: .\instructions\templates\instructions\Instruct3_lump.html:13
+msgid ""
+"The computer will randomly select one of your 3 rounds.\n"
+"        The <b>Payoff</b> points in that round will be exchanged for Euros "
+"at a rate of &euro; 1.00 = 23 points."
+msgstr ""
+"Der Computer wird zum Schluss zufällig eine der 3 Runden auswählen. Ihre "
+"Punkte in dieser Runde werden mit einem Wechselkurs von <b>&euro; 1.00 = 23 "
+"Punkte</b> in Euros umgerechnet. Dieser Betrag wird Ihre Vergütung sein, die "
+"Sie zusätzlich für Ihre Teilnahme bekommen werden."
+
+#: .\instructions\templates\instructions\Intro.html:19
+msgid "Welcome!"
+msgstr "Willkommen!"
+
+#: .\instructions\templates\instructions\Intro.html:21
+msgid ""
+"In this survey,\n"
+"        you will participate in a <b>simulation</b> where you will be asked "
+"to make <b>financial decisions</b>."
+msgstr ""
+"In dieser Studie werden Sie im Rahmen einer <b>Simulation</b> verschiedene "
+"<b>finanzielle Entscheidungen</b> treffen."
+
+#: .\instructions\templates\instructions\Intro.html:24
+msgid ""
+"Depending on your financial decisions,\n"
+"        you can earn an <b>additional compensation</b> that ranges between "
+"EUR 5 and EUR 15 on average.\n"
+"        Higher or lower amounts are also possible."
+msgstr ""
+"Je nachdem wie Sie sich entscheiden, werden Sie <b>zusätzlich</b> zu Ihrer "
+"Grundvergütung eine <b>Belohnung</b> bekommen können. Diese zusätzliche "
+"Belohnung ist in den meisten Fällen zwischen <b>EUR 5</b> und <b>EUR 15</b>. "
+"Höhere bzw. tiefe Beträge sind aber auch möglich."
+
+#: .\instructions\templates\instructions\Intro.html:28
+msgid ""
+"To maximize your compensation, we first ask you to read the <b>instructions</"
+"b> carefully.\n"
+"        Then, you will participate in a <b>trial</b> round.\n"
+"        Then, before starting with the real simulation,\n"
+"        you will be asked to correctly answer a <b>quiz</b> on the "
+"simulation's rules."
+msgstr ""
+"Um Ihre finanzielle Entschädigung für diese Studie zu maximieren, bitten wir "
+"Sie zuerst die <b>Instruktionen</b> aufmerksam zu lesen. Danach werden Sie "
+"an einer <b>Proberunde</b> teilnehmen. Bevor Sie die reale Simulation "
+"beginnen, werden Sie ein Paar <b>Testfragen</b> zu den Regeln der Simulation "
+"beantworten."
+
+#: .\instructions\templates\instructions\Intro.html:33
+msgid ""
+"Only participants <b>correctly</b> answering the quiz questions will be\n"
+"        admitted to the real simulation and earn compensation."
+msgstr ""
+"<b>Nur</b> Teilenehmende, die diese Fragen <b>korrekt</b> beantworten, "
+"werden zu der realen Simulation zugelassen."
+
+#: .\instructions\templates\instructions\Intro.html:36
+msgid ""
+"The simulation must be completed <b>without long interruptions</b>.\n"
+"        Please, only start the simulation if you have enough time."
+msgstr ""
+"Falls Sie zu der realen Simulation zugelassen werden, müssen Sie Ihre "
+"Entscheidungen <b>ohne</b> große zeitliche Unterbrüche treffen. Wir bitten "
+"Sie die Simulation nur dann zu starten, wenn Sie genügend Zeit haben diese "
+"abzuschließen."
+
+#: .\instructions\templates\instructions\Intro.html:39
+msgid "Do you want to start the simulation?"
+msgstr "Möchten Sie die Simulation jetzt starten?"
+
+#: .\instructions\templates\instructions\Intro.html:41
+msgid "Yes"
+msgstr "Ja"
+
+#: .\instructions\templates\instructions\Intro.html:43
+msgid "No"
+msgstr "Nein"
+
+#: .\instructions\templates\instructions\Intro.html:46
+msgid "Next"
+msgstr "Weiter"
+
+#~ msgid ""
+#~ "In this experiment, you will decide how much to save during a simulated "
+#~ "life."
+#~ msgstr ""
+#~ "In diesem Experiment werden Sie im Rahmen eines simulierten Lebens "
+#~ "<b>Sparentscheidungen</b> treffen."
+
+#~ msgid ""
+#~ "Your life will have two phases: a working phase (10 periods) and a rest "
+#~ "phase (5 periods).\n"
+#~ "        In the working phase, you will work, earn income, and decide how "
+#~ "much to save.\n"
+#~ "        In the rest phase, you will not earn any income."
+#~ msgstr ""
+#~ "Ihr simuliertes Leben wird zwei Phasen haben: eine <b>Arbeitsphase</b> "
+#~ "von 10 Perioden und eine <b>Ruhestandsphase</b> von 5 Perioden. In der "
+#~ "Arbeitsphase werden Sie arbeiten und einen Lohn verdienen. In dieser "
+#~ "Phase werden Sie auch entscheiden, wie viel Sie für die Ruhestandsphase "
+#~ "sparen wollen. In der Ruhestandsphase werden Sie nicht arbeiten und "
+#~ "deswegen keinen Lohn bekommen."
+
+#~ msgid "You will have two lives."
+#~ msgstr "Sie werden zwei Leben haben."
+
+#~ msgid "Working task and wages (working phase)"
+#~ msgstr "Arbeitsaufgabe und Lohn"
+
+#~ msgid ""
+#~ "At the beginning of each period of the <b>working phase</b>,\n"
+#~ "        you will work on a simple task."
+#~ msgstr ""
+#~ "In der <b>Arbeitsphase</b> werden Sie zu Beginn jeder Periode eine "
+#~ "einfache Aufgabe bearbeiten."
+
+#~ msgid ""
+#~ "For each submitted task you will receive a fixed <b>Wage</b> of 480 "
+#~ "points."
+#~ msgstr ""
+#~ "Für jede erfüllte Aufgabe werden Sie einen fixen <b>Lohn</b> von <b>480 "
+#~ "Punkten</b> bekommen."
+
+#~ msgid "Wage Tax"
+#~ msgstr "Lohnsteuer"
+
+#~ msgid ""
+#~ "Your <b>Wage</b> will be subject to a <b>Tax</b> of 40%%.\n"
+#~ "        The Tax will be deducted from your Wage."
+#~ msgstr ""
+#~ "Ihr Arbeitslohn unterliegt einer Steuer in Höhe von 40%%, die direkt "
+#~ "einbehalten wird."
+
+#~ msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
+#~ msgstr "Ihr Arbeitslohn abzüglich der Steuer ergibt Ihren <b>Nettolohn</b>."
+
+#~ msgid "Savings"
+#~ msgstr "Sparentscheidungen"
+
+#~ msgid ""
+#~ "Following the work task, at each working period,\n"
+#~ "        you will decide how much of your <b>Net Wage</b> to put on "
+#~ "<b>Savings</b> for the rest phase."
+#~ msgstr ""
+#~ "Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel "
+#~ "Sie von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
+
+#~ msgid "Your <b>Savings</b> will earn 5%% interest per period."
+#~ msgstr ""
+#~ "Der Sparbetrag wird bis zur Auszahlung in der Ruhestandsphase mit 5%% pro "
+#~ "Periode verzinst."
+
+#~ msgid ""
+#~ "Since you do not pay taxes on Savings,\n"
+#~ "        you will receive 40%% of the amount that you decide to save in "
+#~ "each period as a <b>Refund</b>,\n"
+#~ "        which will be added automatically to your <b>Reward</b> in each "
+#~ "period.\n"
+#~ "        For example, if you save 100 points in one period, you will "
+#~ "receive 40 points as a <b>Tax Refund</b> in that period."
+#~ msgstr ""
+#~ "Da der Betrag, den Sie sparen von Steuern befreit ist, erhalten Sie in "
+#~ "jeder Periode eine <b>Steuererstattung</b> in Höhe von 40%% des "
+#~ "Sparbetrags."
+
+#~ msgid ""
+#~ "You will receive your <b>Savings</b> including accumulated interest back "
+#~ "during the <b>rest phase</b>.\n"
+#~ "        The computer will automatically calculate equal <b>Withdraw</b> "
+#~ "per each period of the rest phase."
+#~ msgstr ""
+#~ "Für jede Periode in der Arbeitsphase wird der Computer automatisch "
+#~ "berechnen wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug "
+#~ "der Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser "
+#~ "Phase gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+#~ "Entscheidungen mehr treffen."
+
+#~ msgid ""
+#~ "Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of "
+#~ "40%%."
+#~ msgstr ""
+#~ "Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer "
+#~ "in Höhe von 40%% zahlen."
+
+#~ msgid ""
+#~ "In each period while you work,\n"
+#~ "        you will decide how much of your <b>Net Wage</b> to put on "
+#~ "<b>Savings</b> for the rest phase."
+#~ msgstr ""
+#~ "Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel "
+#~ "Sie von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
+
+#~ msgid "Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free."
+#~ msgstr ""
+#~ "Der <b>Bezug</b> der Ersparnisse in der Ruhestandsphase ist "
+#~ "<b>steuerfrei</b>."
+
+#~ msgid ""
+#~ "You will receive a <b>bonus</b> of 66.67%% over the amount saved.\n"
+#~ "        For example, if you save 100 points, your bonus will be 67 points."
+#~ msgstr ""
+#~ "Auf den Betrag, den Sie in jeder Periode sparen, erhalten Sie ein Bonus "
+#~ "von 66.67%%."
+
+#~ msgid "All your <b>Savings</b> earn 5%% interest per period."
+#~ msgstr ""
+#~ "Ihre Ersparnisse werden bis zum Beginn der Ruhestandsphase mit 5%% pro "
+#~ "Periode verzinst."
+
+#~ msgid ""
+#~ "You will receive your <b>Savings</b> back during the <b>rest phase</b>.\n"
+#~ "        The computer will automatically calculate equal <b>Withdraw</b> "
+#~ "per each period of the rest phase."
+#~ msgstr ""
+#~ "Für jede Periode in der Arbeitsphase wird der Computer automatisch "
+#~ "berechnen wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug "
+#~ "der Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser "
+#~ "Phase gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+#~ "Entscheidungen treffen."
+
+#~ msgid ""
+#~ "In <b>working periods</b>,\n"
+#~ "        your <b>Reward</b> will be the difference between your <b>Net "
+#~ "Wage</b> and your <b>Savings, plus the tax refund</b>."
+#~ msgstr ""
+#~ "In jeder Periode während der Arbeitsphase entspricht Ihre Belohnung (in "
+#~ "Punkten) Ihrem Nettolohn abzüglich des Betrags, den Sie sparen zuzüglich "
+#~ "der Steuerrückerstattung."
+
+#~ msgid ""
+#~ "In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> "
+#~ "minus its <b>Tax</b> of 40%%."
+#~ msgstr ""
+#~ "In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem "
+#~ "bezogenen Sparbetrag abzüglich der Steuer in der Höhe von 40%%."
+
+#~ msgid "In each period, your <b>Reward</b> will be automatically calculated."
+#~ msgstr ""
+#~ "In jeder Periode wird Ihre Belohnung (in Punkten) automatisch berechnet."
+
+#~ msgid ""
+#~ "In <b>working periods</b>,\n"
+#~ "        your <b>Reward</b> will be the difference between your <b>Net "
+#~ "Wage</b> and your <b>Savings</b>."
+#~ msgstr ""
+#~ "In jeder Periode während der Arbeitsphase entspricht Ihre Belohnung (in "
+#~ "Punkten) Ihrem Nettolohn abzüglich des Betrags, den Sie sparen."
+
+#~ msgid ""
+#~ "In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b>."
+#~ msgstr ""
+#~ "In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem "
+#~ "bezogenen Sparbetrag."
+
+#~ msgid ""
+#~ "\n"
+#~ "    <p>In each period while you work,\n"
+#~ "        you will decide how much of your <b>Net Wage</b> to put on "
+#~ "<b>Savings</b> for the rest phase.</p>\n"
+#~ "\n"
+#~ "    <p>Your <b>Savings</b> will earn 5%% interest per period.</p>\n"
+#~ "\n"
+#~ "    <p>You will receive your <b>Savings</b> including accumulated "
+#~ "interest back during the <b>rest phase</b>.\n"
+#~ "        The computer will automatically calculate equal <b>Withdraw</b> "
+#~ "per each period of the rest phase.</p>\n"
+#~ "\n"
+#~ "    <p>Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free.</"
+#~ "p>\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "<p>Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel "
+#~ "Sie von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen.</"
+#~ "p>\n"
+#~ "\n"
+#~ "<p>Der Sparbetrag wird bis zur Auszahlung in der Ruhestandsphase mit 5% "
+#~ "pro Periode verzinst (inkl. Zinseszinsen). Der <b>Bezug</b> der "
+#~ "Ersparnisse in der Ruhestandsphase ist <b>steuerfrei</b>.</p>\n"
+#~ "\n"
+#~ "<p>Für jede Periode in der Arbeitsphase wird der Computer automatisch "
+#~ "berechnen wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug "
+#~ "der Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser "
+#~ "Phase gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+#~ "Entscheidungen mehr treffen.</p>"
+
+#~ msgid "<b>Net Wage</b>"
+#~ msgstr "in jeder Periode entscheiden wie viel Sie von Ihrem"
+
+#~ msgid " to put on "
+#~ msgstr " Nettolohn "
+
+#~ msgid "<b>Savings</b>"
+#~ msgstr "für die Ruhestandsphase"
+
+#~ msgid " for the rest phase."
+#~ msgstr " <b>sparen</b> wollen."
+
+#~ msgid "Your <b>"
+#~ msgstr "Der"

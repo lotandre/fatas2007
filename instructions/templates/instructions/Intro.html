@@ -1,0 +1,76 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3>
+        <br>
+    </h3>
+
+    <p>{% blocktrans %}Welcome!{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}In this survey,
+        you will participate in a <b>simulation</b> where you will be asked to make <b>financial decisions</b>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Depending on your financial decisions,
+        you can earn an <b>additional compensation</b> that ranges between EUR 5 and EUR 15 on average.
+        Higher or lower amounts are also possible.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}To maximize your compensation, we first ask you to read the <b>instructions</b> carefully.
+        Then, you will participate in a <b>trial</b> round.
+        Then, before starting with the real simulation,
+        you will be asked to correctly answer a <b>quiz</b> on the simulation's rules.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Only participants <b>correctly</b> answering the quiz questions will be
+        admitted to the real simulation and earn compensation.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}The simulation must be completed <b>without long interruptions</b>.
+        Please, only start the simulation if you have enough time.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Do you want to start the simulation?{% endblocktrans %}</p>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="consent1" name="consent" value="yes">
+    <label for="consent1">{% blocktrans %}Yes{% endblocktrans %}</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="consent2" name="consent" value="no">
+    <label for="consent2">{% blocktrans %}No{% endblocktrans %}</label><br>
+
+    <br>
+    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="NewTab()">{% blocktrans %}Next{% endblocktrans %}</button>
+    <br></br>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100" style="width:3%">
+            <span class="sr-only">100% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        function NewTab() {
+            if (document.getElementById('consent2').checked) {
+                window.open(js_vars.url, "_blank");
+            }
+        }
+    </script>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

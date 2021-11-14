@@ -1,0 +1,157 @@
+{% load otree i18n %}
+
+<div id="tab-area">
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Instruction')">{% blocktrans %}Instruction{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Experiment')">{% blocktrans %}Experiment{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Card')">{% blocktrans %}Card Deck Draw{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Decision')">{% blocktrans %}Payoff Decision{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Rewards')">{% blocktrans %}Rewards{% endblocktrans %}</button>
+</div>
+
+<div id="Instruction" class="tabcontent">
+    <p>{% blocktrans %}Please click the other tabs to check the instruction if you want.{% endblocktrans %}</p>
+</div>
+
+<div id="Experiment" class="tabcontent">
+    <p>{% blocktrans %}This experiment has three rounds.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Each round lasts a variable number of periods (from 1 to 15).
+        The exact length of each round depends on a random draw.{% endblocktrans %}</p>
+</div>
+
+<div id="Card" class="tabcontent">
+    <p>{% blocktrans %}At the beginning of each round,
+        you will get a <b>Card Deck</b> with 14 <b><span style="color: green">green</span></b> cards
+        and 1 <b><span style="color: red">red</span></b> card.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}At the end of each period, one card is randomly drawn out of the <b>Card Deck</b>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}If the card drawn is <b><span style="color: green">green</span></b>, you will proceed to the next period, and the card will be removed.
+        If the card draw is <b><span style="color: red">red</span></b>, the round will end.{% endblocktrans %}</p>
+</div>
+
+<div id="Decision" class="tabcontent">
+    <p>{% blocktrans %}At the beginning of each round,
+        you must decide in which period you want to <b>Start</b> earning <b>Payoffs</b> (in points).{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}The later your <b>Start</b> period, the more you will earn per period as shown in the table below.{% endblocktrans %}</p>
+
+    <table id="info_table" style="width: 70%">
+        <colgroup>
+           <col span="1" style="width: 35%;">
+           <col span="1" style="width: 35%;">
+        </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+        <tbody>
+            <tr>
+                <th><b>{% blocktrans %}If I start earning Payoffs in period...{% endblocktrans %}</b></th>
+                <th><b>{% blocktrans %}…then my Payoff (in points) in each of the following periods will be:{% endblocktrans %}</b></th>
+            </tr>
+            <tr><td>1</td><td>13</td></tr>
+            <tr><td>2</td><td>14</td></tr>
+            <tr><td>3</td><td>16</td></tr>
+            <tr><td>4</td><td>19</td></tr>
+            <tr><td>5</td><td>23</td></tr>
+            <tr><td>6</td><td>27</td></tr>
+            <tr><td>7</td><td>33</td></tr>
+            <tr><td>8</td><td>42</td></tr>
+            <tr><td>9</td><td>54</td></tr>
+            <tr><td>10</td><td>71</td></tr>
+            <tr><td>11</td><td>100</td></tr>
+            <tr><td>12</td><td>150</td></tr>
+            <tr><td>13</td><td>250</td></tr>
+            <tr><td>14</td><td>500</td></tr>
+            <tr><td>15</td><td>1500</td></tr>
+        </tbody>
+    </table>
+
+    <p>{% blocktrans %}You will continue earning the same number of points as in the Start period until you draw a red card. In this case, the round ends.
+        If you draw the red card before your <b>Start</b> period, you will earn zero.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}<b>Example</b>: Suppose that at the beginning of a round you chose to
+        <b>Start</b> receiving a Payoff on Period 8.
+        Suppose also that you draw green cards until Period 9 and at the end of Period 10 you draw a red card.
+        In this case, you would earn zero in Period 1 to 7 (because you chose to Start receiving Payoffs in Period 8).
+        In period 8, you earn 42 points (see table above). In period 9 and 10, while you are still active,
+        you continue earning 42 points.
+        In Period 11 you earn zero, since at the end of Period 10 you draw the red card and the round ended.{% endblocktrans %}</p>
+</div>
+
+<div id="Rewards" class="tabcontent">
+    <p>{% blocktrans %}We sum your <b>Total Payoff</b> points at the end of each round.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}The computer will randomly select one of the 3 rounds.
+        The <b>Total Payoff</b> points in that round will be exchanged for Euros at a rate of &euro; 1.00 = 23 points.{% endblocktrans %}</p>
+</div>
+
+</div>
+
+<br>
+
+<script>
+    function openCity(evt, cityName) {
+        event.preventDefault();
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    // document.getElementById("defaultOpen").click();
+</script>
+
+<style>
+    /* Style the tab */
+    #tab-area {
+        padding-left: 10px;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 850px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        width: 850px;
+    }
+</style>

@@ -1,0 +1,61 @@
+{% extends "result/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+        {% blocktrans %}Summary{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}You have finished all activities.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}For additional compensation, Life {{ reward_life }} was chosen.
+        Your reward on that period was {{ reward_euro }} Euro.{% endblocktrans %}</p>
+
+    <p>
+        {% blocktrans %}You chose to invest {{ risk_choice }}% (or {{ invest }} Euro) in the risky investment.
+        The result of the risky investment is "{{ risk_outcome }}".
+        You get {{ earn_invest }} Euro from the investment.
+        Your total reward is {{ total }} Euro.{% endblocktrans %}
+    </p>
+
+    <p>{% blocktrans %}Click on Finish to collect your additional compensation.{% endblocktrans %}</p>
+
+    <br>
+
+    <input type="hidden" name="finished" value="" id="finished"/>
+    <input type="hidden" name="total_payoff" value="" id="payoff"/>
+    <button class="otree-btn-next btn btn-primary" onclick="NewTab()">{% blocktrans %}Finish{% endblocktrans %}</button>
+
+    <br></br>
+
+    <div class="progress">
+       <div class="progress-bar" role="progressbar" aria-valuenow="100"
+           aria-valuemin="0" aria-valuemax="100" style="width:100%">
+           <span class="sr-only">100% Complete</span>
+       </div>
+    </div>
+
+    <script>
+        function NewTab() {
+            window.open(js_vars.url, "_blank");
+            document.getElementById('finished').value = '1';
+            document.getElementById('payoff').value = {{ total|json }};
+        }
+    </script>
+
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-title {
+            display: none;
+        }
+    </style>
+{% endblock %}
+
+

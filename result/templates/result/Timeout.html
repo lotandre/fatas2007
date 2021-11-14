@@ -1,0 +1,99 @@
+{% extends "result/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+        {% blocktrans %}Long breaks{% endblocktrans %}
+    </h3>
+
+    <p>
+        {% blocktrans %}Unfortunately, you are taking very long breaks.
+            The simulation needs to be completed in a reasonable amount of time, as informed in the introduction page.
+            Thus, we regret to inform that you are unable to continue participating in the simulation.{% endblocktrans %}
+    </p>
+
+    <br>
+
+    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="NewTab()">{% blocktrans %}Finish{% endblocktrans %}</button>
+
+    <br></br>
+     <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="62"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <span class="sr-only">62% Complete</span>
+        </div>
+     </div>
+
+    <script>
+        function NewTab() {
+            window.open(js_vars.url, "_blank");
+        }
+    </script>
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        .noUi-slide {
+            width: 100%; /* Width of the outside container */
+        }
+
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 9px;
+        }
+        .noUi-value {
+            margin-top: -8px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 10px;
+        }
+        #customers {
+          {#font-family: Arial, Helvetica, sans-serif;#}
+          border-collapse: collapse;
+          width: 50%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            padding: 8px;
+            text-align: center;
+            width: 50%;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+    </style>
+
+{% endblock %}
+
+

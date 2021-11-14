@@ -1,0 +1,52 @@
+{% extends "quiz/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3><br>{% blocktrans %}Quiz{% endblocktrans %}</h3>
+
+    <p>
+        {% blocktrans %}You will now answer a short quiz of five questions about the game.
+        If you have difficulties answering the questions, consult the instructions at the bottom of the page.{% endblocktrans %}
+    </p>
+
+    {% formfields %}
+
+    {% next_button %}
+
+    {% if treatment == 'annuity' %}
+        {% include "quiz/includes/tabs_annuity.html" %}
+    {% elif treatment == 'combined' %}
+        {% include "quiz/includes/tabs_combined.html" %}
+    {% else %}
+        {% include "quiz/includes/tabs_lump.html" %}
+    {% endif %}
+
+    <br>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="11"
+            aria-valuemin="0" aria-valuemax="100" style="width:31%">
+            <span class="sr-only">11% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}

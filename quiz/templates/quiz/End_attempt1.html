@@ -1,0 +1,43 @@
+{% extends "quiz/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3><br>{% blocktrans %}Ineligible to participate{% endblocktrans %}</h3>
+
+    <p>
+        {% blocktrans %}Unfortunately, you did not answer all the questions of the quiz correctly.
+            The simulation requires that subjects understand its basic functions and elements,
+            as informed in the introduction page.
+            Thus, we regret to inform that you are unable to participate in the simulation.{% endblocktrans %}
+    </p>
+
+    <button class="otree-btn-next btn btn-primary" onclick="NewTab()">{% blocktrans %}Finish{% endblocktrans %}</button>
+
+    <br></br>
+
+     <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <span class="sr-only">100% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        function NewTab() {
+            window.open(js_vars.url, "_blank");
+        }
+    </script>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

@@ -1,0 +1,51 @@
+{% extends "post_survey/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3><br>{% blocktrans %}Task{% endblocktrans %} 2/2</h3>
+
+    <p>{% blocktrans %}In the following we offer you a bonus, in additional to your rewards with this game.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Which option do you prefer?{% endblocktrans %}</p>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time1" name="time_choice" value="delay0">
+    <label for="time1">{% blocktrans %}My rewards now, no bonus.{% endblocktrans %}</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time2" name="time_choice" value="delay1">
+    <label for="time2">{% blocktrans %}My rewards plus 5.0% bonus, in one month.{% endblocktrans %}</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time3" name="time_choice" value="delay2">
+    <label for="time3">{% blocktrans %}My rewards plus 10.3% bonus, in two months.{% endblocktrans %}</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time4" name="time_choice" value="delay3">
+    <label for="time4">{% blocktrans %}My rewards plus 15.8% bonus, in three months.{% endblocktrans %}</label><br><br>
+
+    {% next_button %}
+
+     <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="99"
+            aria-valuemin="0" aria-valuemax="100" style="width:99%">
+            <span class="sr-only">99% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}

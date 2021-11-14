@@ -1,0 +1,90 @@
+{% extends "quiz/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3><br>{% blocktrans %}Quiz: try again{% endblocktrans %}</h3>
+
+    <p>{% blocktrans %}Please answer correctly the question(s) again, before advancing to the live round.
+        There is a hint below.{% endblocktrans %}</p>
+
+    {% formfields %}
+
+    {% if show1 == 1 and treatment != 'lump' %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 1: <br>
+        At the beginning of each round,
+        you must decide in which period you want to <b>Start</b> earning <b>Payoffs</b> (in points).{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show1 == 1 and treatment == 'lump' %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 1: <br>
+        At the beginning of each round,
+        you will decide in which period you want to earn your <b>Payoffs</b> (in points).{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show2 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 2: <br>
+        If the card drawn is <b><span style="color: green">green</span></b>, you will proceed to the next period, and the card will be removed.
+        If the card draw is <b><span style="color: red">red</span></b>, the round will end.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show3 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 3: <br>
+        If the card drawn is <b><span style="color: green">green</span></b>, you will proceed to the next period, and the card will be removed.
+        If the card draw is <b><span style="color: red">red</span></b>, the round will end.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show4 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 4: <br>
+        The computer will randomly select one of the 3 rounds.
+        The <b>Total Payoff</b> points in that round will be exchanged for Euros at a rate of &euro; 1.00 = 23 points.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show5 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint of question 5: <br>
+        If you draw the red card before your <b>Payoff</b> period, you will earn zero.
+        {% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% next_button %}
+
+    <br>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="11"
+            aria-valuemin="0" aria-valuemax="100" style="width:32%">
+            <span class="sr-only">11% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}

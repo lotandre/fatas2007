@@ -1,0 +1,112 @@
+{% load otree i18n %}
+
+<div class="fixed-top">
+
+{#    <nav class="navbar navbar-expand navbar-expand-lg navbar-light bg-light">#}
+        <div class=" navbar-expand ml-auto  " id="navbarToggler">
+            <div class="btn-group navbar-nav ml-auto mt-2 mt-lg-0 " role="group" aria-label="Menu buttons">
+             {% get_current_language as LANGUAGE_CODE %}
+
+    <div class="controls  field-lang">
+
+{#        <div class="form-check form-check-inline">#}
+{#            <input type="radio" name="lang" value="en" required="" id="id_lang_0" class="form-check-input"#}
+{#                    {% if LANGUAGE_CODE == 'en' %}#}
+{#                   checked#}
+{#                    {% endif %}#}
+{#            >#}
+{##}
+{#            <label for="id_lang_0" class="form-check-label">{% trans 'English' %}</label>#}
+{#        </div>#}
+
+
+{#        <div class="form-check form-check-inline">#}
+{#            <input type="radio" name="lang" value="sv" required="" id="id_lang_2" class="form-check-input"#}
+{#                    {% if LANGUAGE_CODE == 'de' %}#}
+{#                   checked#}
+{#                    {% endif %}#}
+{#            >#}
+{##}
+{#            <label for="id_lang_2" class="form-check-label">{% trans 'Swedish' %}</label>#}
+{#        </div>#}
+
+    </div>
+
+            </div>
+        </div>
+{#    </nav>#}
+</div>
+
+<script>
+    $('input[name="lang"]').on('click', function (e) {
+        window.location.search = `language=${this.value}`;
+    })
+</script>
+
+<style>
+    .innerprogcont {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .progress2 {
+        height: 30px;
+        border-radius: 0px;
+    }
+
+    .progress1 {
+        height: 30px;
+    }
+
+    .item {
+        font-size: 15px;
+        text-align: center;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 100%
+
+    }
+
+    .item.active {
+        color: white;
+        background: #007bff !important;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>

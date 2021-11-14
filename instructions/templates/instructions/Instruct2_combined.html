@@ -1,0 +1,82 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    {% blocktrans %}Start of Payoff Decision{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}At the beginning of each round (before Period 1),
+        you decide in which period you want to <b>Start</b> earning <b>Payoffs</b> (in points).
+        That period also determines your possible one-time <b>Payoff Bonus</b>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}The later your <b>Start</b> period the larger your one-time bonus is as shown in the table below.{% endblocktrans %}</p>
+
+    <table id="info_table" style="width: 90%">
+        <colgroup>
+           <col span="1" style="width: 30%;">
+           <col span="1" style="width: 30%;">
+           <col span="1" style="width: 30%;">
+        </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+        <tbody>
+            <tr>
+                <th><b>{% blocktrans %}If I start earning Payoffs in period...{% endblocktrans %}</b></th>
+                <th><b>{% blocktrans %}…then my Payoff (in points) in each of the following periods will be:{% endblocktrans %}</b></th>
+                <th><b>{% blocktrans %}I will also receive a one-time Payoff bonus (in points):{% endblocktrans %}</b></th>
+            </tr>
+            <tr><td>1</td><td>13</td><td>0</td></tr>
+            <tr><td>2</td><td>14</td><td>0</td></tr>
+            <tr><td>3</td><td>16</td><td>0</td></tr>
+            <tr><td>4</td><td>19</td><td>0</td></tr>
+            <tr><td>5</td><td>23</td><td>0</td></tr>
+            <tr><td>6</td><td>23</td><td>25</td></tr>
+            <tr><td>7</td><td>23</td><td>53</td></tr>
+            <tr><td>8</td><td>23</td><td>85</td></tr>
+            <tr><td>9</td><td>23</td><td>123</td></tr>
+            <tr><td>10</td><td>23</td><td>170</td></tr>
+            <tr><td>11</td><td>23</td><td>232</td></tr>
+            <tr><td>12</td><td>23</td><td>318</td></tr>
+            <tr><td>13</td><td>23</td><td>455</td></tr>
+            <tr><td>14</td><td>23</td><td>716</td></tr>
+            <tr><td>15</td><td>23</td><td>1477</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p>{% blocktrans %}For the Start period you will receive the Payoff and the one-time Payoff bonus for that period.
+        You will continue earning the same number of points as in the Start period (but no bonus) until you draw a red card.
+        In this case, the round ends.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}<b>Example</b>: Suppose that at the beginning of a round you chose to
+        <b>Start</b> receiving a Payoff on Period 8.
+        Suppose also that you draw green cards until Period 9 and at the end of Period 10 you draw a red card.
+        In this case, you would earn zero on Period 1 to 7 (because you chose to Start receiving Payoffs in Period 8).
+        In period 8, you earn 23 points as a Payoff and 85 points as a one-time Payoff bonus.
+        In Period 9, you will earn 23 points (see table above).
+        In period 10, you will earn 23 points again since you are still active.
+        In Period 11 you earn zero, since at the end of Period 10 you draw the red card and exit the round.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:6%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-14 12:18+0200\n"
+"PO-Revision-Date: 2021-11-14 12:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: .\trial_combined\pages.py:26
+msgid "Please decide when you start your payoff."
+msgstr "Bitte entscheiden Sie, wann Sie mit Ihrer Auszahlung beginnen."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:17
+#: .\trial_combined\templates\trial_combined\Draw.html:11
+#: .\trial_combined\templates\trial_combined\Start.html:11
+msgid "Trial round"
+msgstr "Proberunde"
+
+#: .\trial_combined\templates\trial_combined\Decision.html:26
+msgid ""
+"You must decide in which period do you want to start earning your "
+"<b>Payoffs</b> (in points)."
+msgstr ""
+"Sie müssen entscheiden in welcher Periode Sie beginnen möchten "
+"<b>Auszahlungen</b> zu bekommen."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:28
+msgid ""
+"Please tap and move on the slider below to indicate when you would like to "
+"start earning your <b>Payoffs</b> (in points)."
+msgstr ""
+"Bitte bewegen Sie den Schieberegler, um anzugeben wann Sie Ihre Auszahlungen "
+"beginnen möchten."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:36
+#: .\trial_combined\templates\trial_combined\Draw.html:16
+msgid "I will earn zero until Period <span id=\"zero_until\"></span>."
+msgstr "Bis Periode <span id=\"zero_until\"></span>, bekommen Sie 0 Punkte."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:39
+msgid ""
+"I will earn a fixed amount of <b><span id=\"fix_payoff\"></span> points in "
+"each of the following periods</b>,\n"
+"        starting in Period <span id=\"start\"></span> (if I am still active)."
+msgstr ""
+"Ab Periode <span id=\"start\"></span>, bekommen Sie <b><span id=\"fix_payoff"
+"\"></span> Punkte in dieser und in jeder der folgenden Perioden</b> (solange "
+"keine rote Karte gezogen wird)."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:42
+msgid ""
+"I will also earn a one-time bonus of <b><span id=\"bonus_payoff\"></span> "
+"points</b>\n"
+"        in Period <span id=\"start1\"></span> (if I am still active)."
+msgstr ""
+"In Periode <span id=\"start1\"></span> werden Sie zusätzlich ein Bonus von "
+"<b>a<span id=\"bonus_payoff\"></span> Punkte</b> bekommen (falls vorher "
+"keine rote Karte gezogen wurde)."
+
+#: .\trial_combined\templates\trial_combined\Decision.html:48
+msgid ""
+"Click on Next when your decision for this round is final (you cannot change "
+"it afterwards)."
+msgstr ""
+"Gehen Sie weiter, sobald Sie sich entschieden haben. Sie werden Ihre "
+"Entscheidung nicht mehr ändern können."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:11
+#: .\trial_combined\templates\trial_combined\Draw.html:40
+msgid "Period"
+msgstr "Periode"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:14
+#, python-format
+msgid "I decided to start earning Payoffs from Period %(start_pay)s."
+msgstr "Sie beginnen Auszahlungen in Periode %(start_pay)s zu bekommen."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:18
+#, python-format
+msgid ""
+"I will earn a fixed amount of <b>%(fix_payoff)s points in each of the "
+"following periods</b>,\n"
+"        starting in Period %(start_pay)s."
+msgstr ""
+"Ab Periode %(start_pay)s, bekommen Sie <b>%(fix_payoff)s Punkte in dieser "
+"und in jeder der folgenden Perioden</b> (solange keine rote Karte gezogen "
+"wurde)."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:21
+#, python-format
+msgid ""
+"I will also earn a one-time bonus of <b>%(bonus_payoff)s points</b> in "
+"Period %(start_pay)s."
+msgstr ""
+"In Periode %(start_pay)s werden Sie noch ein Bonus von <b>%(bonus_payoff)s "
+"Punkte</b> bekommen (falls vorher keine rote Karte gezogen wurde)."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:23
+msgid ""
+"A <b><span style=\"color: green\">green</span></b> card was selected.\n"
+"        You will advance to the next period."
+msgstr ""
+"Eine <b><span style=\"color: green\">grüne</span></b> Karte wurde gezogen. "
+"Sie gehen zu der nächsten Periode"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:26
+msgid ""
+"A <b><span style=\"color: red\">red</span></b> card was selected.\n"
+"        Your round is finished."
+msgstr ""
+"Eine <b><span style=\"color: red\">rote</span></b> Karte wurde gezogen. Die "
+"Runde endet."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:41
+msgid "Card"
+msgstr "Karte"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:42
+msgid "Payoff in period"
+msgstr "Auszahlung (in Punkten)"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:43
+msgid "One-time bonus"
+msgstr "Einmaliger Bonus"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:136
+msgid "Total payoff"
+msgstr "Auszahlung in dieser Runde"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:172
+msgid "green"
+msgstr "grün"
+
+#: .\trial_combined\templates\trial_combined\Draw.html:177
+msgid "red"
+msgstr "rot"
+
+#: .\trial_combined\templates\trial_combined\Start.html:14
+msgid ""
+"You will now play a trial life to get you familiarized with the experiment."
+msgstr ""
+"Sie werden jetzt ein Probelaufleben spielen, um sich mit dem Spiel vertraut "
+"zu machen."
+
+#: .\trial_combined\templates\trial_combined\Start.html:16
+msgid ""
+"Everything is identical to the lives you will play,\n"
+"        except that you will not earn any financial reward based on the "
+"results of this trial life."
+msgstr ""
+"Alles entspricht der Runde, die Sie spielen werden, außer dass Sie keine "
+"finanzielle Belohnung auf der Grundlage der Ergebnisse dieses Probelaufs "
+"erhalten."
+
+#: .\trial_combined\templates\trial_combined\Start.html:19
+msgid ""
+"Use this round to explore all features of the game.\n"
+"        You can access the instructions clicking on the buttons at the "
+"bottom of the page."
+msgstr ""
+"Nutzen Sie diese Testrunde, um alle Funktionen des Spiels zu erkunden. Sie "
+"können die Anleitung jederzeit aufrufen, indem Sie auf die Schaltflächen "
+"unten auf der Seite klicken."
+
+#: .\trial_combined\templates\trial_combined\Summary.html:11
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: .\trial_combined\templates\trial_combined\Summary.html:14
+#, python-format
+msgid ""
+"This is the end of the trial round. Your reward in the trial round is "
+"%(total_payoff)s points.\n"
+"        This reward from the trial round will not be paid to you, as this is "
+"just a test."
+msgstr ""
+"Das ist das Ende der Proberunde. Ihre Belohnung in der Proberunde beträgt "
+"%(total_payoff)s Punkte. Diese Belohnung wird Ihnen nicht vergütet, da dies "
+"nur ein Test ist."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:6
+msgid "Instruction"
+msgstr "Anweisung"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:7
+msgid "Experiment"
+msgstr "Experiment"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:8
+msgid "Card Deck Draw"
+msgstr "Kartenstapel"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:9
+msgid "Payoff Decision"
+msgstr "Auszahlungsbeginn"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:10
+msgid "Rewards"
+msgstr "Ihre Belohnung"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:14
+msgid "Please click the other tabs to check the instruction if you want."
+msgstr ""
+"Bitte klicken Sie auf die anderen Registerkarten, um die Anweisungen zu "
+"überprüfen, wenn Sie möchten."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:18
+msgid "This experiment has three rounds."
+msgstr "Dieses Experiment hat drei Runden."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:20
+msgid ""
+"Each round lasts a variable number of periods (from 1 to 15).\n"
+"        The exact length of each round depends on a random draw."
+msgstr ""
+"Jede Runde dauert bis zu 15 Perioden. Die Anzahl Perioden in einer Runde "
+"wird zufällig bestimmt."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:25
+msgid ""
+"At the beginning of each round,\n"
+"        you will get a <b>Card Deck</b> with 14 <b><span style=\"color: green"
+"\">green</span></b> cards\n"
+"        and 1 <b><span style=\"color: red\">red</span></b> card."
+msgstr ""
+"Am Anfang einer Runde werden Sie einen <b>Kartenstapel</b> mit 14 <b><span "
+"style=\"color: green\">grünen</span></b> und 1 <b><span style=\"color: "
+"darkred\">roten</span></b> Karten bekommen."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:29
+msgid ""
+"At the end of each period, one card is randomly drawn out of the <b>Card "
+"Deck</b>."
+msgstr ""
+"Am Ende jeder Periode wird zufällig eine Karte von diesem <b>Kartenstapel</"
+"b> gezogen."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:31
+msgid ""
+"If the card drawn is <b><span style=\"color: green\">green</span></b>, you "
+"will proceed to the next period, and the card will be removed.\n"
+"        If the card draw is <b><span style=\"color: red\">red</span></b>, "
+"the round will end."
+msgstr ""
+"Falls die gezogene Karte <b><span style=\"color: green\">grünen</span></b> "
+"ist, wird die nächste Periode anfangen. Falls die Karte <b><span style="
+"\"color: darkred\">rot</span></b> ist, wird die Runde zu Ende gehen. Die "
+"gezogene Karte wird vom Kartenstapel entfernt."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:36
+msgid ""
+"At the beginning of each round (before Period 1),\n"
+"        you decide in which period you want to <b>Start</b> earning "
+"<b>Payoffs</b> (in points).\n"
+"        That period also determines your possible one-time <b>Payoff Bonus</"
+"b>."
+msgstr ""
+"Am Anfang von jeder Runde werden Sie entscheiden müssen in welcher Periode "
+"Sie beginnen möchten, eine Auszahlung zu bekommen. Dieser Zeitraum bestimmt "
+"auch Ihren möglichen einmaligen Auszahlungsbonus."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:40
+msgid ""
+"The later your <b>Start</b> period the larger your one-time bonus is as "
+"shown in the table below."
+msgstr ""
+"Je später die Auszahlung erfolgt, desto höher ist der Betrag, den Sie "
+"erhalten werden wie die Tabelle unten zeigt."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:52
+msgid "If I start earning Payoffs in period..."
+msgstr "Periode, in der die Auszahlung beginnt"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:53
+msgid "…then my Payoff (in points) in each of the following periods will be:"
+msgstr "Auszahlung (in Punkten) für alle darauffolgenden Perioden"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:54
+msgid "I will also receive a one-time Payoff bonus (in points):"
+msgstr "Einmaliger Bonus (in Punkten)"
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:74
+msgid ""
+"For the Start period you will receive the Payoff and the one-time Payoff "
+"bonus for that period.\n"
+"        You will continue earning the same number of points as in the Start "
+"period (but no bonus) until you draw a red card.\n"
+"        In this case, the round ends."
+msgstr ""
+"In der Periode, in dem Sie entscheiden eine Auszahlung zu bekommen, werden "
+"Sie die Auszahlung für diese Periode und einen einmaligen Bonus bekommen. In "
+"allen darauffolgenden Perioden werden Sie dieselbe Auszahlung bekommen wie "
+"in der Periode in dem Sie anfangen, ohne den einmaligen Bonus. Sie bekommen "
+"diese Auszahlungen bis Sie eine rote Karte ziehen. In diesem Fall wird die "
+"Runde zu Ende gehen."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:78
+msgid ""
+"<b>Example</b>: Suppose that at the beginning of a round you chose to\n"
+"        <b>Start</b> receiving a Payoff on Period 8.\n"
+"        Suppose also that you draw green cards until Period 9 and at the end "
+"of Period 10 you draw a red card.\n"
+"        In this case, you would earn zero on Period 1 to 7 (because you "
+"chose to Start receiving Payoffs in Period 8).\n"
+"        In period 8, you earn 23 points as a Payoff and 85 points as a one-"
+"time Payoff bonus.\n"
+"        In Period 9, you will earn 23 points (see table above).\n"
+"        In period 10, you will earn 23 points again since you are still "
+"active.\n"
+"        In Period 11 you earn zero, since at the end of Period 10 you draw "
+"the red card and exit the round."
+msgstr ""
+"<b>Beispiel</b>: Nehmen Sie an, Sie würden am Anfang der Runde entscheiden, "
+"Auszahlungen ab Periode 8 zu bekommen. Nehmen Sie auch an, dass Sie bis "
+"Periode 9 eine grüne Karte und in Periode 10 eine rote Karte ziehen. In "
+"diesem Fall werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie "
+"entschieden haben eine Auszahlung ab Periode 8 zu bekommen). In Periode 8 "
+"werden Sie 23 Punkte Als Auszahlung und einen einmaligen Bonus von 85 "
+"Punkten bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
+"je 23 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
+"keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
+"Karte gezogen haben und damit die Runde zu Ende ging."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:89
+msgid ""
+"We sum your <b>Total Payoff</b> points at the end of each round (including "
+"the bonus)."
+msgstr ""
+"Für jede Runde werden alle Ihre Punkte, die Sie als Auszahlung und als Bonus "
+"bekommen, <b>addiert</b>."
+
+#: .\trial_combined\templates\trial_combined\includes\tabs.html:91
+msgid ""
+"The computer will randomly select one of your 3 rounds.\n"
+"        The <b>Total Payoff</b> points in that round will be exchanged for "
+"Euros at a rate of &euro; 1.00 = 23 points."
+msgstr ""
+"Der Computer wird zum Schluss zufällig eine der 3 Runden auswählen. Ihre "
+"Punkte, die Sie in dieser Runde gesammelt haben, werden mit einem "
+"Wechselkurs von <b>&euro; 1.00 = 23 Punkte</b> in Euros umgerechnet. Dieser "
+"Betrag wird Ihre Vergütung sein, die Sie zusätzlich für Ihre Teilnahme "
+"bekommen werden."
+
+#~ msgid ""
+#~ "You will continue earning the same number of points as in the Start "
+#~ "period until you draw a red card. In this case, the round ends.\n"
+#~ "        If you draw the red card before your <b>Start</b> period, you "
+#~ "will earn zero."
+#~ msgstr ""
+#~ "Sie werden dieselbe Anzahl Punkte als Auszahlung in allen darauffolgenden "
+#~ "Perioden erhalten bis Sie eine rote Karte ziehen. In diesem Fall wird die "
+#~ "Runde zu Ende gehen. Wenn Sie die rote Karte vor der Periode ziehen, in "
+#~ "der die Auszahlungen beginnen sollten, werden Sie keine Auszahlung "
+#~ "bekommen."

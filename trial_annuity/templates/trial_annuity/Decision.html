@@ -1,0 +1,148 @@
+{% extends "trial_annuity/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <head>
+        <link href="{% static 'nouislider.min.css' %}" rel="stylesheet">
+        <script src="{% static 'wNumb.min.js' %}"></script>
+        <script src="{% static 'nouislider.min.js' %}"></script>
+    </head>
+
+    <h3>
+    <br>
+    {% blocktrans %}Trial round{% endblocktrans %}
+    </h3>
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <p>{% blocktrans %}You must decide in which period do you want to start earning your <b>Payoffs</b> (in points).{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Please tap and move on the slider below to indicate when you would like to start earning your <b>Payoffs</b> (in points).{% endblocktrans %}</p>
+
+    <input type="hidden" name="start_pay" value="" id="myRange"/>
+    <input type="hidden" name="check_start_pay" value="" id="id_check"/>
+    <div type="range" class="noUiSlider" id="slider"></div>
+
+    <br>
+    <div id="show" style="visibility: hidden">
+    <p>{% blocktrans %}I will earn zero until Period <span id="zero_until"></span>.{% endblocktrans %}</p>
+    </div>
+
+    <p>{% blocktrans %}I will earn a fixed amount of <b><span id="fix_payoff"></span> points in each of the following periods</b>,
+        starting in Period <span id="start"></span> (if I am still active).{% endblocktrans %}</p>
+
+    <input type="hidden" name="fix_payoff" value="" id="demo_fix_payoff"/>
+
+    <p>{% blocktrans %}Click on Next when your decision for this round is final (you cannot change it afterwards).{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    {% include 'trial_annuity/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function () {
+        var slider = document.getElementById('slider');
+        var pay = document.getElementById('myRange');
+        var check = document.getElementById('id_check');
+
+        // Initializing the sliders
+        noUiSlider.create(slider, {
+        start: 0,
+        step: 1,
+        tooltips: wNumb({decimals: 0}),
+        format: wNumb({decimals: 0}),
+        // Disable animation on value-setting,
+        // so the sliders respond immediately.
+        animate: false,
+        range: {
+            'min': 1,
+            'max': 15
+        },
+        pips: {
+            mode: 'values',
+            values: [1, 15],
+            density: 100
+        }
+        });
+
+        // Update the input formfield values with the slider values
+        slider.noUiSlider.on('update', function (values, handle) {
+            pay.value = values[handle];
+        });
+
+        var handle_style = document.getElementById("slider").querySelector('.noUi-handle');
+        slider.noUiSlider.on('slide', function () {
+            handle_style.style.display = 'block';
+            handle_style.style.background = '#007bff';
+            check.value = 1;
+        });
+
+        /* Show and update the slider value only when the handle is touched */
+        slider.noUiSlider.on('slide', function () {
+            slider.noUiSlider.on('update', function (values, handle) {
+                if (values[handle] > 1) {
+                    document.getElementById('show').style.visibility = 'visible';
+                }
+                else {
+                    document.getElementById('show').style.visibility = 'hidden';
+                }
+                document.getElementById('zero_until').innerHTML = values[handle] - 1;
+                document.getElementById('fix_payoff').innerHTML = {{ payoff_list|safe }}[values[handle]-1];
+                document.getElementById('demo_fix_payoff').value = {{ payoff_list|safe }}[values[handle]-1];
+                document.getElementById('start').innerHTML = values[handle];
+            });
+        });
+    });
+    </script>
+
+    <style>
+        .otree-title{
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 7px;
+        }
+        .noUi-pips-values {
+            display: block;
+        }
+        .noUi-value {
+            margin-top: -10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 7px;
+        }
+        .noUiSlider {
+            width: 800px;
+        }
+    </style>
+
+{% endblock %}

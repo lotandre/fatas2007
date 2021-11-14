@@ -1,0 +1,226 @@
+{% extends "post_survey/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <link href="{% static 'nouislider.min.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html"
+          xmlns="http://www.w3.org/1999/html">
+    <script src="{% static 'wNumb.min.js' %}"></script>
+    <script src="{% static 'nouislider.min.js' %}"></script>
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3><br>{% blocktrans %}Task{% endblocktrans %} 1/2</h3>
+
+    <p>{% blocktrans %}Now, you can invest part of (or all) your rewards in a risky asset.
+        <br>
+        With the risky asset, in 1/3 of the cases you will gain 2.5 times the amount you invest,
+        in 2/3 of the cases you will lose the amount you invest.{% endblocktrans %}</p>
+
+    <script src="{% static 'TweenMax.min.js' %}"></script>
+    <script src="{% static 'Winwheel.min.js' %}"></script>
+    <link href="{% static 'shCoreDefault.css' %}" rel="stylesheet">
+
+    <table width="50%">
+        <tr>
+            <div style="position: absolute">
+                <td align="left" >
+                    <img src="{% static 'arrow1.png' %}" width="320" height="20" style="position: relative;
+                        z-index: 1" />
+                    <canvas id="imgCanvas" class="tutCanvas" width="320" height="220" style="position: relative;
+                        z-index: 0">
+                    </canvas>
+                </td>
+            </div>
+        </tr>
+    </table>
+    <br>
+
+    <script>
+        // Create the wheel
+        let planeWheel = new Winwheel({
+            'canvasId' : 'imgCanvas',
+            'drawMode' : 'image'                // drawMode must be set to image.
+        });
+
+        // Create new image object in memory.
+        let loadedImg = new Image();
+
+        // Create onLoad callback to execute once the image has finished loading.
+        loadedImg.onload = function()
+        {
+            planeWheel.wheelImage = loadedImg;    // Make wheelImage equal the loaded image object.
+            planeWheel.draw();                    // Also call draw function to render the wheel.
+            beginAnimation();
+        };
+
+        // Set the image source, once complete this will trigger the onLoad callback (above).
+        if ({{ lang|json }} == 'en') {
+            loadedImg.src = "{% static 'wheel_GP.png' %}";
+        }
+        if ({{ lang|json }} == 'de') {
+            loadedImg.src = "{% static 'wheel_GP_de.png' %}";
+        }
+
+        function beginAnimation()
+        {
+            // Add listener for the tick of the animation timer.
+            TweenLite.ticker.addEventListener("tick", gameLoop);
+
+            // Add repeating tween to rotate the wheel.
+            TweenMax.to(planeWheel, 3, {rotationAngle:360, delay:2, repeat:-1, ease:Linear.easeNone});
+        }
+
+        function gameLoop()
+        {
+            planeWheel.draw();
+        }
+    </script>
+
+    <p>{% blocktrans %}The amount you do not invest is not affected by the outcome of the risky asset.
+        <br>
+        Use the slider to see your potential gain and loss with the risky asset
+        and decide what percentage of your rewards to invest in it.{% endblocktrans %}</p>
+
+    <input type="hidden" name="risk_choice" value="" id="myRange"/>
+    <input type="hidden" name="check_risk_choice" value="" id="id_check_risk_choice"/>
+    <div type="range" class="noUiSlider" id="slider_risk_choice"></div>
+    <hr style="height:8px; visibility:hidden" />
+
+    <p>{% blocktrans %}You invest <span id="demo_risky"></span>% of your reward in the risky investment.
+        <br>
+        <b>In 1/3 of the cases, you will gain <span id="demo_win"></span>% over your original reward.
+            <br>
+            In 2/3 of the cases, you will lose <span id="demo_lose"></span>% of your original reward.
+        </b>{% endblocktrans %}
+    </p>
+
+    <br>
+    {% next_button %}
+
+     <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="98"
+            aria-valuemin="0" aria-valuemax="100" style="width:97%">
+            <span class="sr-only">98% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        // Set up
+        var slider = document.getElementById('slider_risk_choice');
+        var slider_output = document.getElementById('myRange');
+        var check_risk_choice_output = document.getElementById('id_check_risk_choice');
+        var sliderValue = document.getElementById('demo_risky');
+        var win = document.getElementById('demo_win');
+        var lose = document.getElementById('demo_lose');
+
+        pipFormats = {'0': '0', '10': '10', '20': '20', '30': '30', '40': '40', '50': '50', '60': '60', '70': '70',
+           '80': '80', '90': '90', '100': '100%'};
+
+        // Initializing the sliders
+        noUiSlider.create(slider, {
+        start: 0,
+        step: 1,
+        format: wNumb({decimals: 0}),
+        tooltips: wNumb({decimals: 0}),
+        // Disable animation on value-setting,
+        // so the sliders respond immediately.
+        animate: false,
+        range: {
+            'min': 0,
+            '10%': 10,
+            '20%': 20,
+            '30%': 30,
+            '40%': 40,
+            '50%': 50,
+            '60%': 60,
+            '70%': 70,
+            '80%': 80,
+            '90%': 90,
+            'max': 100
+        },
+        pips: {
+            mode: 'range',
+            density: 10,
+            format: {
+                to: function(a) {
+                    return pipFormats[a];
+                }
+            }
+        }
+        });
+
+        // Update the input formfield values with the slider values
+        slider.noUiSlider.on('update', function (values, handle) {
+            slider_output.value = values[handle];
+        });
+
+        /* Show and update the slider value only when the handle is touched */
+        slider.noUiSlider.on('slide', function () {
+            slider.noUiSlider.on('update', function (values, handle) {
+            sliderValue.innerHTML = values[handle];
+            win.innerHTML = 2.5 * values[handle];
+            lose.innerHTML = values[handle];
+            });
+        });
+
+        $(document).ready(function () {
+            var handle_style1 = document.getElementById("slider_risk_choice").querySelector('.noUi-handle');
+            slider.noUiSlider.on('slide', function () {
+                handle_style1.style.display = 'block';
+                handle_style1.style.background = '#007bff';
+                check_risk_choice_output.value = 1;
+            });
+        });
+
+        $(document).ready(function() {
+            $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+        });
+    </script>
+
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        .noUi-slide {
+            width: 100%; /* Width of the outside container */
+        }
+
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 9px;
+        }
+        .noUi-value {
+            margin-top: -8px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 10px;
+        }
+    </style>
+
+{% endblock %}
+
+

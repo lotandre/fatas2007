@@ -1,0 +1,41 @@
+{% extends "quiz/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <p>
+    <br><br>
+        {% blocktrans %}Before you advance to the live round, you need to complete a quiz.{% endblocktrans %}
+    </p>
+
+    <p><b>
+        {% blocktrans %}You will be removed from the game, and earn no compensation,
+            if you give two or more wrong answers.{% endblocktrans %}
+    </b></p>
+
+    <p>{% blocktrans %}If you need to read the instructions again,
+        you will find them at the bottom of the page with the test questions.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="11"
+            aria-valuemin="0" aria-valuemax="100" style="width:31%">
+            <span class="sr-only">11% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends "annuity/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+    {% blocktrans %}Round{% endblocktrans %} {{ life_num }} {% blocktrans %}Period{% endblocktrans %} {{ round_num }}
+    </h3>
+
+    <p>{% blocktrans %}I decided to start earning Payoffs from Period {{ start_pay }}.{% endblocktrans %}</p>
+
+    <p id="show">{% blocktrans %}I will earn zero until Period <span id="zero_until"></span>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}I will earn a fixed amount of <b>{{ fix_payoff }} points in each of the following periods</b>,
+        starting in Period {{ start_pay }}.{% endblocktrans %}</p>
+
+    <p id="green">{% blocktrans %}A <b><span style="color: green">green</span></b> card was selected.
+        You will advance to the next period.{% endblocktrans %}</p>
+
+    <p id="red">{% blocktrans %}A <b><span style="color: red">red</span></b> card was selected.
+        Your round is finished.{% endblocktrans %}</p>
+
+    <table id="info_table" style="width: 30%">
+        <colgroup>
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 10%;">
+        </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+        <tbody>
+            <tr>
+                <th>{% blocktrans %}Period{% endblocktrans %}</th>
+                <th>{% blocktrans %}Card{% endblocktrans %}</th>
+                <th>{% blocktrans %}Payoff in period{% endblocktrans %}</th>
+            </tr>
+            <tr>
+                <td><span id="period1"></span></td>
+                <td><span id="card1"></span></td>
+                <td><span id="payoff1"></span></td>
+            </tr>
+            <tr id="show2">
+                <td><span id="period2"></span></td>
+                <td><span id="card2"></span></td>
+                <td><span id="payoff2"></span></td>
+            </tr>
+            <tr id="show3">
+                <td><span id="period3"></span></td>
+                <td><span id="card3"></span></td>
+                <td><span id="payoff3"></span></td>
+            </tr>
+            <tr id="show4">
+                <td><span id="period4"></span></td>
+                <td><span id="card4"></span></td>
+                <td><span id="payoff4"></span></td>
+            </tr>
+            <tr id="show5">
+                <td><span id="period5"></span></td>
+                <td><span id="card5"></span></td>
+                <td><span id="payoff5"></span></td>
+            </tr>
+            <tr id="show6">
+                <td><span id="period6"></span></td>
+                <td><span id="card6"></span></td>
+                <td><span id="payoff6"></span></td>
+            </tr>
+            <tr id="show7">
+                <td><span id="period7"></span></td>
+                <td><span id="card7"></span></td>
+                <td><span id="payoff7"></span></td>
+            </tr>
+            <tr id="show8">
+                <td><span id="period8"></span></td>
+                <td><span id="card8"></span></td>
+                <td><span id="payoff8"></span></td>
+            </tr>
+            <tr id="show9">
+                <td><span id="period9"></span></td>
+                <td><span id="card9"></span></td>
+                <td><span id="payoff9"></span></td>
+            </tr>
+            <tr id="show10">
+                <td><span id="period10"></span></td>
+                <td><span id="card10"></span></td>
+                <td><span id="payoff10"></span></td>
+            </tr>
+            <tr id="show11">
+                <td><span id="period11"></span></td>
+                <td><span id="card11"></span></td>
+                <td><span id="payoff11"></span></td>
+            </tr>
+            <tr id="show12">
+                <td><span id="period12"></span></td>
+                <td><span id="card12"></span></td>
+                <td><span id="payoff12"></span></td>
+            </tr>
+            <tr id="show13">
+                <td><span id="period13"></span></td>
+                <td><span id="card13"></span></td>
+                <td><span id="payoff13"></span></td>
+            </tr>
+            <tr id="show14">
+                <td><span id="period14"></span></td>
+                <td><span id="card14"></span></td>
+                <td><span id="payoff14"></span></td>
+            </tr>
+            <tr id="show15">
+                <td><span id="period15"></span></td>
+                <td><span id="card15"></span></td>
+                <td><span id="payoff15"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left"><b>{% blocktrans %}Total payoff{% endblocktrans %}</b></td>
+                <td><span id="total_payoff"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% if life_num == 1 %}
+        <input type="hidden" name="total_payoff1" value="" id="demo_total_payoff"/>
+    {% elif life_num == 2 %}
+        <input type="hidden" name="total_payoff2" value="" id="demo_total_payoff"/>
+    {% elif life_num == 3 %}
+        <input type="hidden" name="total_payoff3" value="" id="demo_total_payoff"/>
+    {% endif %}
+
+    <br>
+    {% next_button %}
+
+    {% include 'annuity/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        var start = {{ start_pay|json }};
+        var round_num = {{ round_num|json }};
+        var red_period = {{ red_period|json }};
+        var total_payoff = 0;
+
+        if (start === 1) {
+            document.getElementById('show').style.display = 'none';
+        }
+
+        document.getElementById('zero_until').innerHTML = {{ start_pay|json }} - 1;
+
+        if (round_num < red_period) {
+            document.getElementById('red').style.display = 'none';
+        }
+        else if (round_num === red_period) {
+            document.getElementById('green').style.display = 'none';
+        }
+
+        /* Show the previous cards and payoffs */
+        for (let k = 1; k < {{ round_num|json }}+1; k++) {
+            $('#period'+k).text(k);
+            if (k <= {{ round_num|json }} && k !== {{ red_period|json }}) {
+                $('#card'+k).text("{% blocktrans %}green{% endblocktrans %}");
+                document.getElementById('card'+k).style.color = 'green';
+                document.getElementById('card'+k).style.fontWeight = 'bold';
+            }
+            else if (k === {{ red_period|json }}) {
+                $('#card'+k).text("{% blocktrans %}red{% endblocktrans %}");
+                document.getElementById('card'+k).style.color = 'red';
+                document.getElementById('card'+k).style.fontWeight = 'bold';
+            }
+            if (k < {{ start_pay|json }}) {
+                document.getElementById('payoff'+k).innerHTML = 0;
+                total_payoff += 0;
+            }
+            else if (k >= {{ start_pay|json }}) {
+                document.getElementById('payoff'+k).innerHTML = {{ fix_payoff|json }};
+                total_payoff += {{ fix_payoff|json }};
+            }
+            document.getElementById('total_payoff').innerHTML = total_payoff;
+            document.getElementById('demo_total_payoff').value = total_payoff;
+        }
+
+        /* Hide the periods not relevant */
+        var hide_period = {{ round_num|json }} + 1;
+        for (let l=hide_period; l<16; l++) {
+            document.getElementById('show'+l).style.display = 'none';
+        }
+    });
+   </script>
+
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-title{
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 7px;
+        }
+        .noUi-pips-values {
+            display: block;
+        }
+        .noUi-value {
+            margin-top: -10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 7px;
+        }
+        .noUiSlider {
+            width: 800px;
+        }
+    </style>
+{% endblock %}
+
+

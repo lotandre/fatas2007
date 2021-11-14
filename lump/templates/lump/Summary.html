@@ -1,0 +1,66 @@
+{% extends "lump/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+    {% blocktrans %}Summary{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}This is the end of round {{ life_num }}.
+        Your reward in this round is {{ total_payoff }} points.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    {% include 'lump/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-timer {
+            display: none;
+        }
+        .otree-title{
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 7px;
+        }
+        .noUi-pips-values {
+            display: block;
+        }
+        .noUi-value {
+            margin-top: -10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 7px;
+        }
+        .noUiSlider {
+            width: 800px;
+        }
+    </style>
+
+{% endblock %}

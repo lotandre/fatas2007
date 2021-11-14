@@ -1,0 +1,35 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    {% blocktrans %}The Financial Decision-Making Experiment{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}This experiment has three rounds.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Each round lasts a variable number of periods (from 1 to 15).
+        The exact length of each round depends on a random draw.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:4%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+
