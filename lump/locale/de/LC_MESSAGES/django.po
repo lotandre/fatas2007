@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-14 12:18+0200\n"
-"PO-Revision-Date: 2021-11-14 11:11+0200\n"
+"POT-Creation-Date: 2021-11-15 19:38+0200\n"
+"PO-Revision-Date: 2021-11-15 19:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr ""
 "Gehen Sie weiter, sobald Sie sich entschieden haben. Sie werden Ihre "
 "Entscheidung nicht mehr ändern können."
 
-#: .\lump\templates\lump\Draw.html:11 .\lump\templates\lump\Draw.html:32
+#: .\lump\templates\lump\Draw.html:11 .\lump\templates\lump\Draw.html:37
 msgid "Period"
 msgstr "Periode"
 
@@ -88,23 +88,40 @@ msgstr ""
 "Eine <b><span style=\"color: red\">rote</span></b> Karte wurde gezogen. Die "
 "Runde endet."
 
-#: .\lump\templates\lump\Draw.html:33
+#: .\lump\templates\lump\Draw.html:22
+#, python-format
+msgid ""
+"The remaining cards on the deck are %(green_card)s green cards and one red "
+"card.\n"
+"        The chance that you will exit this round after next period is %"
+"(chance)s %%."
+msgstr ""
+"Es gibt noch %(green_card)s grüne Karten und eine rote Karte. Die "
+"Wahrscheinlichkeit, daß die Runde nach dieser Periode endet, ist %(chance)s %"
+"%."
+
+#: .\lump\templates\lump\Draw.html:25
+#, python-format
+msgid "The remaining cards on the deck are %(green_card)s green cards."
+msgstr "Es gibt noch %(green_card)s grüne Karten."
+
+#: .\lump\templates\lump\Draw.html:38
 msgid "Card"
 msgstr "Karte"
 
-#: .\lump\templates\lump\Draw.html:34
+#: .\lump\templates\lump\Draw.html:39
 msgid "Payoff in period"
 msgstr "Auszahlung (in Punkten)"
 
-#: .\lump\templates\lump\Draw.html:112
+#: .\lump\templates\lump\Draw.html:117
 msgid "Total payoff"
 msgstr "Auszahlung in dieser Runde"
 
-#: .\lump\templates\lump\Draw.html:148
+#: .\lump\templates\lump\Draw.html:162
 msgid "green"
 msgstr "grün"
 
-#: .\lump\templates\lump\Draw.html:153
+#: .\lump\templates\lump\Draw.html:167
 msgid "red"
 msgstr "rot"
 
@@ -162,7 +179,7 @@ msgid ""
 "Each round lasts a variable number of periods (from 1 to 15).\n"
 "        The exact length of each round depends on a random draw."
 msgstr ""
-"Jede Runde dauert bis zu 15 Perioden. Die Anzahl Perioden in einer Runde "
+"Jede Runde dauert bis zu 15 Perioden. Die Anzahl an Perioden in einer Runde "
 "wird zufällig bestimmt."
 
 #: .\lump\templates\lump\includes\tabs.html:25
@@ -191,10 +208,10 @@ msgid ""
 "        If the card draw is <b><span style=\"color: red\">red</span></b>, "
 "the round will end."
 msgstr ""
-"Falls die gezogene Karte <b><span style=\"color: green\">grünen</span></b> "
+"Falls die gezogene Karte <b><span style=\"color: green\">grün</span></b> "
 "ist, wird die nächste Periode anfangen. Falls die Karte <b><span style="
-"\"color: darkred\">rot</span></b> ist, wird die Runde zu Ende gehen. Die "
-"gezogene Karte wird vom Kartenstapel entfernt."
+"\"color: red\">rot</span></b> ist, wird die Runde beendet. Die gezogene "
+"Karte wird vom Kartenstapel entfernt."
 
 #: .\lump\templates\lump\includes\tabs.html:36
 msgid ""
@@ -202,8 +219,8 @@ msgid ""
 "        you will decide in which period you want to earn your <b>Payoffs</b> "
 "(in points)."
 msgstr ""
-"Zu Beginn jeder Runde entscheiden Sie, in welchem Zeitraum Sie Ihre "
-"<b>Auszahlungen</b> (in Punkten) verdienen möchten."
+"Am Anfang von jeder Runde müssen Sie entscheiden in welcher Periode Sie eine "
+"<b>Auszahlung</b> erhalten möchten."
 
 #: .\lump\templates\lump\includes\tabs.html:39
 msgid ""
@@ -213,20 +230,20 @@ msgstr ""
 "erhalten werden wie die Tabelle unten zeigt."
 
 #: .\lump\templates\lump\includes\tabs.html:50
-msgid "If I start earning Payoffs in period..."
-msgstr "Periode, in der die Auszahlung beginnt"
+msgid "If I earn Payoff in period..."
+msgstr "Periode der Auszahlung"
 
 #: .\lump\templates\lump\includes\tabs.html:51
-msgid "…then my Payoff (in points) will be:"
-msgstr "Auszahlung (in Punkten)"
+msgid "... then my one-time Payoff (in points) will be:"
+msgstr "Einmalige Auszahlung (in Punkten)"
 
 #: .\lump\templates\lump\includes\tabs.html:72
 msgid ""
 "If you draw the red card before your <b>Payoff</b> period, you will earn "
 "zero."
 msgstr ""
-"Wenn Sie die rote Karte vor Ihrer <b>Auszahlung </b> Periode ziehen, "
-"verdienen Sie null."
+"Wenn Sie die rote Karte ziehen bevor Sie <b>Auszahlungen</b> bekommen, wird "
+"Ihre Auszahlung Null sein."
 
 #: .\lump\templates\lump\includes\tabs.html:74
 msgid ""
@@ -261,7 +278,7 @@ msgstr ""
 "werden Sie 188 Punkte als Auszahlung bekommen (s. Tabelle oben). In Periode "
 "9 und 10 werden Sie keine Auszahlungen mehr bekommen. In Periode 11 werden "
 "Sie ebenfalls keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 "
-"eine rote Karte gezogen haben und damit die Runde zu Ende ging."
+"eine rote Karte gezogen haben und damit die Runde beendet ist."
 
 #: .\lump\templates\lump\includes\tabs.html:88
 msgid ""

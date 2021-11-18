@@ -26,6 +26,11 @@
     <p id="red">{% blocktrans %}A <b><span style="color: red">red</span></b> card was selected.
         Your round is finished.{% endblocktrans %}</p>
 
+    <p id="green_card">{% blocktrans %}The remaining cards on the deck are {{ green_card }} green cards and one red card.
+        The chance that you will exit this round after next period is {{ chance }} %.{% endblocktrans %}</p>
+
+    <p id="red_card">{% blocktrans %}The remaining cards on the deck are {{ green_card }} green cards.{% endblocktrans %}</p>
+
     <table id="info_table" style="width: 40%">
         <colgroup>
            <col span="1" style="width: 10%;">
@@ -174,9 +179,11 @@
 
         if (round_num < red_period) {
             document.getElementById('red').style.display = 'none';
+            document.getElementById('red_card').style.display = 'none';
         }
         else if (round_num === red_period) {
             document.getElementById('green').style.display = 'none';
+            document.getElementById('green_card').style.display = 'none';
         }
 
         /* Show the previous cards and payoffs */

@@ -23,7 +23,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 15
 
-    red_seq = range(2, 16)
+    red_seq = range(1, 16)
 
 
 class Subsession(BaseSubsession):

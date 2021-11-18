@@ -18,7 +18,7 @@ class Info(Page):
     get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.participant.vars['end'] == 0 and \
                self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
@@ -37,7 +37,7 @@ class Risk_pref(Page):
     get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.participant.vars['end'] == 0 and \
                self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
@@ -59,7 +59,7 @@ class Time_pref(Page):
     get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.participant.vars['end'] == 0 and \
                self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):

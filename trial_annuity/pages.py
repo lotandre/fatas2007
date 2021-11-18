@@ -9,7 +9,7 @@ class Start(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.player.round_number == 1 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.player.round_number == 1 and \
                self.participant.vars['consent'] == 'yes'
 
 
@@ -18,7 +18,7 @@ class Decision(Page):
     form_fields = ['start_pay', 'check_start_pay', 'fix_payoff']
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.player.round_number == 1 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.player.round_number == 1 and \
                self.participant.vars['consent'] == 'yes'
 
     def error_message(self, values):
@@ -46,7 +46,7 @@ class Draw(Page):
     form_fields = ['total_payoff']
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and \
+        return self.participant.vars['time_instruction'] >= 10 and \
                self.player.round_number <= self.participant.vars['red_period'] and \
                self.participant.vars['consent'] == 'yes'
 
@@ -56,12 +56,21 @@ class Draw(Page):
         start_pay = self.participant.vars['start_pay']
         fix_payoff = self.participant.vars['fix_payoff']
         red_period = self.participant.vars['red_period']
+        green_card = 14 - self.player.round_number
+        chance = 0
+        if self.player.round_number < self.participant.vars['red_period']:
+            chance = round(1 / (15 - self.player.round_number) * 100, 1)
+        elif self.player.round_number == self.participant.vars['red_period']:
+            chance = 100
+
         return {
             'round_num': round_num,
             'round_num_bar': round_num_bar,
             'start_pay': start_pay,
             'fix_payoff': fix_payoff,
-            'red_period': red_period
+            'red_period': red_period,
+            'green_card': green_card,
+            'chance': chance
         }
 
     def before_next_page(self):
@@ -72,7 +81,7 @@ class Summary(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and \
+        return self.participant.vars['time_instruction'] >= 10 and \
                self.player.round_number == self.participant.vars['red_period'] \
                and self.participant.vars['consent'] == 'yes'
 

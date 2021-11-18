@@ -15,7 +15,7 @@ class Start(Page):
     get_timeout_seconds = get_timeout_seconds
     
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.player.round_number == 1 and \
+        return self.participant.vars['time_instruction'] >= 10 and self.player.round_number == 1 and \
                self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
                get_timeout_seconds(self.player) > 3
 
@@ -25,7 +25,7 @@ class Decision(Page):
     get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and (self.player.round_number in [1, 16, 31]) and \
+        return self.participant.vars['time_instruction'] >= 10 and (self.player.round_number in [1, 16, 31]) and \
                self.participant.vars['consent'] == 'yes' and self.participant.vars['end'] == 0 and \
                get_timeout_seconds(self.player) > 3
     
@@ -101,7 +101,7 @@ class Draw(Page):
             advance = 'yes'
         elif self.player.round_number > 30 and self.player.round_number <= self.participant.vars['red_period_annu3'] + 30:
             advance = 'yes'
-        return self.participant.vars['time_instruction'] >= 30 and advance == 'yes' and \
+        return self.participant.vars['time_instruction'] >= 10 and advance == 'yes' and \
                self.participant.vars['consent'] == 'yes' and self.participant.vars['end'] == 0 and \
                get_timeout_seconds(self.player) > 3
 
@@ -112,6 +112,8 @@ class Draw(Page):
         fix_payoff = 0
         red_period = 0
         round_num_bar = 0
+        green_card = 0
+        chance = 0
 
         if self.player.round_number < 16:
             start_pay = self.participant.vars['start_pay1']
@@ -128,10 +130,27 @@ class Draw(Page):
 
         if self.player.round_number < 16:
             round_num_bar = self.player.round_number + 33
+            green_card = 15 - self.player.round_number - 1
+            if self.player.round_number < self.participant.vars['red_period_annu1']:
+                chance = round(1 / (15 - self.player.round_number) * 100, 1)
+            elif self.player.round_number == self.participant.vars['red_period_annu1']:
+                chance = 100
+
         elif self.player.round_number in range(16, 31):
             round_num_bar = self.player.round_number + 39
+            green_card = 30 - self.player.round_number - 1
+            if self.player.round_number < self.participant.vars['red_period_annu2'] + 15:
+                chance = round(1 / (15 - (self.player.round_number - 15)) * 100, 1)
+            elif self.player.round_number == self.participant.vars['red_period_annu2'] + 15:
+                chance = 100
+
         elif self.player.round_number > 30:
             round_num_bar = self.player.round_number + 45
+            green_card = 45 - self.player.round_number - 1
+            if self.player.round_number < self.participant.vars['red_period_annu3'] + 30:
+                chance = round(1 / (15 - (self.player.round_number - 30)) * 100, 1)
+            elif self.player.round_number == self.participant.vars['red_period_annu3'] + 30:
+                chance = 100
 
         return {
             'life_num': life_num,
@@ -139,7 +158,9 @@ class Draw(Page):
             'start_pay': start_pay,
             'fix_payoff': fix_payoff,
             'red_period': red_period,
-            'round_num_bar': round_num_bar
+            'round_num_bar': round_num_bar,
+            'green_card': green_card,
+            'chance': chance
         }
 
     def before_next_page(self):
@@ -165,7 +186,7 @@ class Summary(Page):
         elif self.player.round_number > 30 and self.player.round_number == self.participant.vars['red_period_annu3'] + 30:
             exit = 'yes'
 
-        return self.participant.vars['time_instruction'] >= 30 and exit == 'yes' and \
+        return self.participant.vars['time_instruction'] >= 10 and exit == 'yes' and \
                self.participant.vars['consent'] == 'yes' and self.participant.vars['end'] == 0 and \
                get_timeout_seconds(self.player) > 3
 

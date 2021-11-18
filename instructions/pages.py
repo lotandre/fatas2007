@@ -28,7 +28,7 @@ class Intro(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/screenout?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/screenout?p=73955&m='+username_value)
 
     def before_next_page(self):
         if self.player.consent == 'no':
@@ -118,11 +118,11 @@ class End_instruct(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] < 30 and self.participant.vars['consent'] == 'yes'
+        return self.participant.vars['time_instruction'] < 10 and self.participant.vars['consent'] == 'yes'
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/quality?p=73955&m='+username_value)
 
 
 page_sequence = [Lang, Intro, Instruct0, Instruct1, Instruct2_annuity, Instruct2_combined, Instruct2_lump,

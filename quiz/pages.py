@@ -11,7 +11,7 @@ class Quiz_start(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['consent'] == 'yes'
+        return self.participant.vars['time_instruction'] >= 10 and self.participant.vars['consent'] == 'yes'
 
 
 class Quiz(Page):
@@ -19,10 +19,10 @@ class Quiz(Page):
     form_fields = ['quiz1', 'quiz2', 'quiz3', 'quiz4', 'quiz5']
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['consent'] == 'yes'
+        return self.participant.vars['time_instruction'] >= 10 and self.participant.vars['consent'] == 'yes'
 
     def quiz1_choices(player):
-        choices = [['period', _('The Period of starting receiving a Payoff')],
+        choices = [['period', _('The Period for receiving a Payoff')],
                    ['card_deck', _('The size of the Card Deck at beginning of the round')],
                    ['red_card', _('The number of red cards on the Card Deck.')]]
         random.shuffle(choices)
@@ -91,11 +91,11 @@ class End_attempt1(Page):
     def is_displayed(self):
         sum_mistake = self.participant.vars['mis_q1']+self.participant.vars['mis_q2']+self.participant.vars['mis_q3'] + \
                       self.participant.vars['mis_q4']+self.participant.vars['mis_q5']
-        return sum_mistake > 2 and self.participant.vars['time_instruction'] >= 30 and self.participant.vars['consent'] == 'yes'
+        return sum_mistake > 2 and self.participant.vars['time_instruction'] >= 10 and self.participant.vars['consent'] == 'yes'
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/quality?p=73955&m='+username_value)
 
     def before_next_page(self):
         self.participant.vars['end'] = 1
@@ -122,7 +122,7 @@ class Quiz_retry(Page):
         return formfield_list
 
     def quiz1_choices(player):
-        choices = [['period', _('The Period of starting receiving a Payoff')],
+        choices = [['period', _('The Period for receiving a Payoff')],
                    ['card_deck', _('The size of the Card Deck at beginning of the round')],
                    ['red_card', _('The number of red cards on the Card Deck.')]]
         random.shuffle(choices)
@@ -159,7 +159,7 @@ class Quiz_retry(Page):
     def is_displayed(self):
         sum_mistake = self.participant.vars['mis_q1']+self.participant.vars['mis_q2']+self.participant.vars['mis_q3']\
             + self.participant.vars['mis_q4']+self.participant.vars['mis_q5']
-        return sum_mistake != 0 and sum_mistake < 3 and self.participant.vars['time_instruction'] >= 30 and \
+        return sum_mistake != 0 and sum_mistake < 3 and self.participant.vars['time_instruction'] >= 10 and \
                self.participant.vars['consent'] == 'yes'
 
     def error_message(self, values):
@@ -235,11 +235,11 @@ class End_attempt2(Page):
     def is_displayed(self):
         sum_mistake = self.participant.vars['mis_q1']+self.participant.vars['mis_q2']+self.participant.vars['mis_q3']\
                       + self.participant.vars['mis_q4']+self.participant.vars['mis_q5']
-        return sum_mistake != 0 and self.participant.vars['time_instruction'] >= 30 and self.participant.vars['consent'] == 'yes'
+        return sum_mistake != 0 and self.participant.vars['time_instruction'] >= 10 and self.participant.vars['consent'] == 'yes'
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/quality?p=73955&m='+username_value)
 
     def before_next_page(self):
         self.participant.vars['end'] = 1

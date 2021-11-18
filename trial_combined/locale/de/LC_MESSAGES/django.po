@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-14 12:18+0200\n"
-"PO-Revision-Date: 2021-11-14 12:20+0200\n"
+"POT-Creation-Date: 2021-11-15 19:38+0200\n"
+"PO-Revision-Date: 2021-11-15 19:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -65,8 +65,8 @@ msgid ""
 "points</b>\n"
 "        in Period <span id=\"start1\"></span> (if I am still active)."
 msgstr ""
-"In Periode <span id=\"start1\"></span> werden Sie zusätzlich ein Bonus von "
-"<b>a<span id=\"bonus_payoff\"></span> Punkte</b> bekommen (falls vorher "
+"In Periode <span id=\"start1\"></span> werden Sie zusätzlich einen Bonus von "
+"<b><span id=\"bonus_payoff\"></span> Punkten</b> bekommen (falls vorher "
 "keine rote Karte gezogen wurde)."
 
 #: .\trial_combined\templates\trial_combined\Decision.html:48
@@ -78,7 +78,7 @@ msgstr ""
 "Entscheidung nicht mehr ändern können."
 
 #: .\trial_combined\templates\trial_combined\Draw.html:11
-#: .\trial_combined\templates\trial_combined\Draw.html:40
+#: .\trial_combined\templates\trial_combined\Draw.html:45
 msgid "Period"
 msgstr "Periode"
 
@@ -104,8 +104,9 @@ msgid ""
 "I will also earn a one-time bonus of <b>%(bonus_payoff)s points</b> in "
 "Period %(start_pay)s."
 msgstr ""
-"In Periode %(start_pay)s werden Sie noch ein Bonus von <b>%(bonus_payoff)s "
-"Punkte</b> bekommen (falls vorher keine rote Karte gezogen wurde)."
+"In Periode %(start_pay)s werden Sie zusätzlich einen Bonus von <b>"
+"%(bonus_payoff)s Punkten</b> bekommen (falls vorher keine rote Karte gezogen "
+"wurde)."
 
 #: .\trial_combined\templates\trial_combined\Draw.html:23
 msgid ""
@@ -123,27 +124,44 @@ msgstr ""
 "Eine <b><span style=\"color: red\">rote</span></b> Karte wurde gezogen. Die "
 "Runde endet."
 
-#: .\trial_combined\templates\trial_combined\Draw.html:41
+#: .\trial_combined\templates\trial_combined\Draw.html:29
+#, python-format
+msgid ""
+"The remaining cards on the deck are %(green_card)s green cards and one red "
+"card.\n"
+"        The chance that you will exit this round after next period is "
+"%(chance)s %%."
+msgstr ""
+"Es gibt noch %(green_card)s grüne Karten und eine rote Karte. Die "
+"Wahrscheinlichkeit, daß die Runde nach dieser Periode endet, ist %(chance)s "
+"%%."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:32
+#, python-format
+msgid "The remaining cards on the deck are %(green_card)s green cards."
+msgstr "Es gibt noch %(green_card)s grüne Karten."
+
+#: .\trial_combined\templates\trial_combined\Draw.html:46
 msgid "Card"
 msgstr "Karte"
 
-#: .\trial_combined\templates\trial_combined\Draw.html:42
+#: .\trial_combined\templates\trial_combined\Draw.html:47
 msgid "Payoff in period"
 msgstr "Auszahlung (in Punkten)"
 
-#: .\trial_combined\templates\trial_combined\Draw.html:43
+#: .\trial_combined\templates\trial_combined\Draw.html:48
 msgid "One-time bonus"
 msgstr "Einmaliger Bonus"
 
-#: .\trial_combined\templates\trial_combined\Draw.html:136
+#: .\trial_combined\templates\trial_combined\Draw.html:141
 msgid "Total payoff"
 msgstr "Auszahlung in dieser Runde"
 
-#: .\trial_combined\templates\trial_combined\Draw.html:172
+#: .\trial_combined\templates\trial_combined\Draw.html:186
 msgid "green"
 msgstr "grün"
 
-#: .\trial_combined\templates\trial_combined\Draw.html:177
+#: .\trial_combined\templates\trial_combined\Draw.html:191
 msgid "red"
 msgstr "rot"
 
@@ -225,7 +243,7 @@ msgid ""
 "Each round lasts a variable number of periods (from 1 to 15).\n"
 "        The exact length of each round depends on a random draw."
 msgstr ""
-"Jede Runde dauert bis zu 15 Perioden. Die Anzahl Perioden in einer Runde "
+"Jede Runde dauert bis zu 15 Perioden. Die Anzahl an Perioden in einer Runde "
 "wird zufällig bestimmt."
 
 #: .\trial_combined\templates\trial_combined\includes\tabs.html:25
@@ -254,10 +272,10 @@ msgid ""
 "        If the card draw is <b><span style=\"color: red\">red</span></b>, "
 "the round will end."
 msgstr ""
-"Falls die gezogene Karte <b><span style=\"color: green\">grünen</span></b> "
+"Falls die gezogene Karte <b><span style=\"color: green\">grün</span></b> "
 "ist, wird die nächste Periode anfangen. Falls die Karte <b><span style="
-"\"color: darkred\">rot</span></b> ist, wird die Runde zu Ende gehen. Die "
-"gezogene Karte wird vom Kartenstapel entfernt."
+"\"color: red\">rot</span></b> ist, wird die Runde beendet. Die gezogene "
+"Karte wird vom Kartenstapel entfernt."
 
 #: .\trial_combined\templates\trial_combined\includes\tabs.html:36
 msgid ""
@@ -299,12 +317,12 @@ msgid ""
 "period (but no bonus) until you draw a red card.\n"
 "        In this case, the round ends."
 msgstr ""
-"In der Periode, in dem Sie entscheiden eine Auszahlung zu bekommen, werden "
+"In der Periode, in der Sie entscheiden eine Auszahlung zu bekommen, werden "
 "Sie die Auszahlung für diese Periode und einen einmaligen Bonus bekommen. In "
 "allen darauffolgenden Perioden werden Sie dieselbe Auszahlung bekommen wie "
-"in der Periode in dem Sie anfangen, ohne den einmaligen Bonus. Sie bekommen "
-"diese Auszahlungen bis Sie eine rote Karte ziehen. In diesem Fall wird die "
-"Runde zu Ende gehen."
+"in der Periode in der Sie anfangen haben Auszahlungen zu erhalten, ohne den "
+"einmaligen Bonus. Sie bekommen diese Auszahlungen bis Sie eine rote Karte "
+"ziehen. In diesem Fall wird die Runde beendet."
 
 #: .\trial_combined\templates\trial_combined\includes\tabs.html:78
 msgid ""
@@ -331,7 +349,7 @@ msgstr ""
 "Punkten bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
 "je 23 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
 "keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
-"Karte gezogen haben und damit die Runde zu Ende ging."
+"Karte gezogen haben und damit die Runde beendet ist."
 
 #: .\trial_combined\templates\trial_combined\includes\tabs.html:89
 msgid ""

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-14 12:18+0200\n"
-"PO-Revision-Date: 2021-11-14 11:11+0200\n"
+"POT-Creation-Date: 2021-11-15 19:38+0200\n"
+"PO-Revision-Date: 2021-11-15 14:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgid ""
 "Each round lasts a variable number of periods (from 1 to 15).\n"
 "        The exact length of each round depends on a random draw."
 msgstr ""
-"Jede Runde dauert bis zu 15 Perioden. Die Anzahl Perioden in einer Runde "
+"Jede Runde dauert bis zu 15 Perioden. Die Anzahl an Perioden in einer Runde "
 "wird zufällig bestimmt."
 
 #: .\instructions\templates\instructions\Instruct1.html:10
@@ -93,14 +93,13 @@ msgid ""
 "        If the card draw is <b><span style=\"color: red\">red</span></b>, "
 "the round will end."
 msgstr ""
-"Falls die gezogene Karte <b><span style=\"color: green\">grünen</span></b> "
+"Falls die gezogene Karte <b><span style=\"color: green\">grün</span></b> "
 "ist, wird die nächste Periode anfangen. Falls die Karte <b><span style="
-"\"color: darkred\">rot</span></b> ist, wird die Runde zu Ende gehen. Die "
-"gezogene Karte wird vom Kartenstapel entfernt."
+"\"color: red\">rot</span></b> ist, wird die Runde beendet. Die gezogene "
+"Karte wird vom Kartenstapel entfernt."
 
 #: .\instructions\templates\instructions\Instruct2_annuity.html:10
 #: .\instructions\templates\instructions\Instruct2_combined.html:10
-#: .\instructions\templates\instructions\Instruct2_lump.html:10
 msgid "Start of Payoff Decision"
 msgstr "Auszahlungsbeginn"
 
@@ -111,7 +110,7 @@ msgid ""
 "<b>Payoffs</b> (in points)."
 msgstr ""
 "Am Anfang jeder Runde werden Sie entscheiden müssen in welcher Periode Sie "
-"<b>beginnen</b> möchten, eine Auszahlung zu bekommen."
+"<b>beginnen</b> möchten, eine Auszahlung zu erhalten."
 
 #: .\instructions\templates\instructions\Instruct2_annuity.html:16
 msgid ""
@@ -123,7 +122,6 @@ msgstr ""
 
 #: .\instructions\templates\instructions\Instruct2_annuity.html:27
 #: .\instructions\templates\instructions\Instruct2_combined.html:29
-#: .\instructions\templates\instructions\Instruct2_lump.html:27
 msgid "If I start earning Payoffs in period..."
 msgstr "Periode, in der die Auszahlung beginnt"
 
@@ -141,8 +139,8 @@ msgid ""
 msgstr ""
 "Sie werden dieselbe Anzahl Punkte als Auszahlung in allen darauffolgenden "
 "Perioden erhalten bis Sie eine rote Karte ziehen. In diesem Fall wird die "
-"Runde zu Ende gehen. Wenn Sie die rote Karte vor der Periode ziehen, in der "
-"die Auszahlungen beginnen sollten, werden Sie keine Auszahlung bekommen."
+"Runde beendet. Wenn Sie die rote Karte vor der Periode ziehen, in der die "
+"Auszahlungen beginnen sollten, werden Sie keine Auszahlung bekommen."
 
 #: .\instructions\templates\instructions\Instruct2_annuity.html:52
 msgid ""
@@ -161,12 +159,12 @@ msgstr ""
 "<b>Beispiel</b>: Angenommen Sie würden am Anfang der Runde entscheiden, "
 "Auszahlungen ab Periode 8 zu bekommen. Nehmen Sie an, dass Sie bis Periode 9 "
 "eine grüne Karte und in Periode 10 eine rote Karte ziehen. In diesem Fall "
-"werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie entscheiden "
+"werden Sie in Periode 1 bis 7 keine Auszahlung bekommen (da Sie entschieden "
 "haben eine Auszahlung ab Periode 8 zu bekommen). In Periode 8 werden Se 42 "
 "Punkte bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
 "je 42 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
 "keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
-"Karte gezogen haben und damit die Runde zu Ende ging."
+"Karte gezogen haben und damit die Runde beendet ist."
 
 #: .\instructions\templates\instructions\Instruct2_combined.html:13
 msgid ""
@@ -200,12 +198,12 @@ msgid ""
 "period (but no bonus) until you draw a red card.\n"
 "        In this case, the round ends."
 msgstr ""
-"In der Periode, in dem Sie entscheiden eine Auszahlung zu bekommen, werden "
+"In der Periode, in der Sie entscheiden eine Auszahlung zu bekommen, werden "
 "Sie die Auszahlung für diese Periode und einen einmaligen Bonus bekommen. In "
 "allen darauffolgenden Perioden werden Sie dieselbe Auszahlung bekommen wie "
-"in der Periode in dem Sie anfangen, ohne den einmaligen Bonus. Sie bekommen "
-"diese Auszahlungen bis Sie eine rote Karte ziehen. In diesem Fall wird die "
-"Runde zu Ende gehen."
+"in der Periode in der Sie anfangen haben Auszahlungen zu erhalten, ohne den "
+"einmaligen Bonus. Sie bekommen diese Auszahlungen bis Sie eine rote Karte "
+"ziehen. In diesem Fall wird die Runde beendet."
 
 #: .\instructions\templates\instructions\Instruct2_combined.html:56
 msgid ""
@@ -232,7 +230,11 @@ msgstr ""
 "Punkten bekommen (s. Tabelle oben). In Periode 9 und 10 werden Sie weiterhin "
 "je 23 Punkte bekommen, da Sie noch aktiv sind. In Periode 11 werden Sie "
 "keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 eine rote "
-"Karte gezogen haben und damit die Runde zu Ende ging."
+"Karte gezogen haben und damit die Runde beendet ist."
+
+#: .\instructions\templates\instructions\Instruct2_lump.html:10
+msgid "Time of Payoff Decision"
+msgstr "Zeitpunkt der Auszahlung"
 
 #: .\instructions\templates\instructions\Instruct2_lump.html:13
 msgid ""
@@ -240,8 +242,8 @@ msgid ""
 "        you will decide in which period you want to earn your <b>Payoffs</b> "
 "(in points)."
 msgstr ""
-"Zu Beginn jeder Runde entscheiden Sie, in welchem Zeitraum Sie Ihre "
-"<b>Auszahlungen</b> (in Punkten) verdienen möchten."
+"Am Anfang von jeder Runde müssen Sie entscheiden in welcher Periode Sie eine "
+"<b>Auszahlung</b> erhalten möchten."
 
 #: .\instructions\templates\instructions\Instruct2_lump.html:16
 msgid ""
@@ -250,17 +252,21 @@ msgstr ""
 "Je später die Auszahlung erfolgt, desto höher ist der Betrag, den Sie "
 "erhalten werden wie die Tabelle unten zeigt."
 
+#: .\instructions\templates\instructions\Instruct2_lump.html:27
+msgid "If I earn Payoff in period..."
+msgstr "Periode der Auszahlung"
+
 #: .\instructions\templates\instructions\Instruct2_lump.html:28
-msgid "…then my Payoff (in points) will be:"
-msgstr "Auszahlung (in Punkten)"
+msgid "... then my one-time Payoff (in points) will be:"
+msgstr "Einmalige Auszahlung (in Punkten)"
 
 #: .\instructions\templates\instructions\Instruct2_lump.html:49
 msgid ""
 "If you draw the red card before your <b>Payoff</b> period, you will earn "
 "zero."
 msgstr ""
-"Wenn Sie die rote Karte vor Ihrer <b>Auszahlung </b> Periode ziehen, "
-"verdienen Sie null."
+"Wenn Sie die rote Karte ziehen bevor Sie <b>Auszahlungen</b> bekommen, wird "
+"Ihre Auszahlung Null sein."
 
 #: .\instructions\templates\instructions\Instruct2_lump.html:51
 msgid ""
@@ -295,7 +301,7 @@ msgstr ""
 "werden Sie 188 Punkte als Auszahlung bekommen (s. Tabelle oben). In Periode "
 "9 und 10 werden Sie keine Auszahlungen mehr bekommen. In Periode 11 werden "
 "Sie ebenfalls keine Auszahlung mehr bekommen, da Sie am Ende der Periode 10 "
-"eine rote Karte gezogen haben und damit die Runde zu Ende ging."
+"eine rote Karte gezogen haben und damit die Runde beendet ist."
 
 #: .\instructions\templates\instructions\Instruct3_annuity.html:10
 #: .\instructions\templates\instructions\Instruct3_combined.html:10
