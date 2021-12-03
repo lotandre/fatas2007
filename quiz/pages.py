@@ -35,9 +35,9 @@ class Quiz(Page):
         return choices
 
     def quiz3_choices(player):
-        choices = [['exit', 'I exit the round.'],
-                   ['advance', 'I advance to the next period.'],
-                   ['new_card', 'I draw a new card before advancing to the next period.']]
+        choices = [['exit', _('I exit the round.')],
+                   ['advance', _('I advance to the next period.')],
+                   ['new_card', _('I draw a new card before advancing to the next period.')]]
         random.shuffle(choices)
         return choices
 
@@ -135,9 +135,9 @@ class Quiz_retry(Page):
         return choices
 
     def quiz3_choices(player):
-        choices = [['exit', 'I exit the round.'],
-                   ['advance', 'I advance to the next period.'],
-                   ['new_card', 'I draw a new card before advancing to the next period.']]
+        choices = [['exit', _('I exit the round.')],
+                   ['advance', _('I advance to the next period.')],
+                   ['new_card', _('I draw a new card before advancing to the next period.')]]
         random.shuffle(choices)
         return choices
 

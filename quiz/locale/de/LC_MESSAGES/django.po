@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-15 19:38+0200\n"
-"PO-Revision-Date: 2021-11-15 19:34+0200\n"
+"POT-Creation-Date: 2021-12-03 13:12+0200\n"
+"PO-Revision-Date: 2021-12-03 13:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -57,17 +57,23 @@ msgstr "Die Größe des Kartenstapels zu Beginn jeder Runde"
 msgid "The number of red cards on the Card Deck."
 msgstr "Die Anzahl roter Karten im Kartenstapel"
 
-#: .\quiz\pages.py:32 .\quiz\pages.py:132
+#: .\quiz\pages.py:32 .\quiz\pages.py:38 .\quiz\pages.py:132
+#: .\quiz\pages.py:138
 msgid "I exit the round."
 msgstr "Die Runde geht zu Ende."
 
-#: .\quiz\pages.py:32 .\quiz\pages.py:132
+#: .\quiz\pages.py:32 .\quiz\pages.py:39 .\quiz\pages.py:132
+#: .\quiz\pages.py:139
 msgid "I advance to the next period."
 msgstr "Ich gehe in die nächste Periode über."
 
 #: .\quiz\pages.py:33 .\quiz\pages.py:133
 msgid "The red card is removed from the Card Deck."
 msgstr "Die Karte wird vom Kartenstapel entfernt."
+
+#: .\quiz\pages.py:40 .\quiz\pages.py:140
+msgid "I draw a new card before advancing to the next period."
+msgstr "Ich ziehe eine neue Karte bevor ich in die nächste Periode übergehe."
 
 #: .\quiz\pages.py:45 .\quiz\pages.py:145
 msgid "Average Payout of all three rounds."
